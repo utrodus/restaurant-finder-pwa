@@ -1,0 +1,39 @@
+@media screen and (min-width: 768px) {
+    header {
+        &.navbar__header {
+            .navbar__container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 3.5rem;
+                nav.main__nav {
+                    ul {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-end;
+                        li {
+                            margin: 0;
+                            a.nav-links {
+                                margin-left: 40px;
+                                color: rgba(255, 255, 255, 0.774);
+                                &:hover {
+                                    color: rgba(255, 255, 255, 1);
+                                }
+                            }
+                        }
+                    }
+                }
+                .logo {
+                    margin-top: 0;
+                    &:hover {
+                        color: rgba(255, 255, 255, 1);
+                    }
+                }
+
+                .navbar__toggle {
+                    display: none;
+                }
+            }
+        }
+    }
+}

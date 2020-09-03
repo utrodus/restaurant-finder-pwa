@@ -1,40 +1,43 @@
 header {
-    &.nav__header {
-        padding: 0 1rem;
+    &.navbar__header {
         background-color: #5eae53;
-        color: white;
-        .logo {
-            width: fit-content;
-            display: inline-block;
-            font-size: 22px;
-            margin-left: 10px;
-        }
-        nav.main__nav {
-            ul {
-                list-style-type: none;
-                display: none;
-                li {
-                    text-align: center;
-                    margin: 15px auto;
-                    a {
-                        @include reset__link;
+        .navbar__container {
+            padding: 0 2.5rem;
+            .logo {
+                width: fit-content;
+                display: inline-block;
+                font-size: 22px;
+            }
+            nav.main__nav {
+                ul {
+                    list-style-type: none;
+                    display: none;
+
+                    &.active {
+                        display: block;
+                        padding: 0.5rem 0;
+                    }
+
+                    li {
+                        text-align: center;
+                        margin: 15px auto;
+                        a {
+                            @include reset__link;
+                        }
                     }
                 }
             }
+            .navbar__toggle {
+                position: absolute;
+                top: 10px;
+                right: 30px;
+                cursor: pointer;
+                color: rgba(255, 255, 255, 0.8);
+                font-size: 24px;
+                i {
+                    font-size: 1em;
+                }
+            }
         }
-    }
-    .navbar__toggle {
-        position: absolute;
-        top: 10px;
-        right: 30px;
-        cursor: pointer;
-        color: rgba(255, 255, 255, 0.8);
-        font-size: 24px;
-        i {
-            font-size: 1em;
-        }
-    }
-    .active {
-        display: block;
     }
 }
