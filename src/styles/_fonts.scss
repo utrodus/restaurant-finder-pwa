@@ -1,0 +1,32 @@
+/*
+*** FONTS RULE
+*/
+
+// Fonts Family
+$DMSans: "DM Sans", sans-serif;
+$WorkSans: "Work Sans", sans-serif;
+
+// Heading
+@mixin headingFont($color) {
+    font-family: $WorkSans;
+    font-weight: bold;
+    color: $color;
+}
+
+@mixin contentFont($fontSize, $color) {
+    font-family: $DMSans;
+    font-weight: 400;
+    color: $color;
+    font-size: $fontSize;
+}
+
+@mixin footerFont {
+    font-family: $WorkSans;
+    color: $white;
+}
+
+@mixin primaryButtonFont {
+    font-family: $DMSans;
+    font-weight: bold;
+    color: $primaryButtonColor;
+}

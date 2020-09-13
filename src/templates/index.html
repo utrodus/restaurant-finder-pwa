@@ -6,32 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CariResto App</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=Caveat&family=DM+Sans&family=Work+Sans:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Work+Sans:ital,wght@0,300;0,500;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_o5hd5vvqpoqiwwmi.css">
 
 </head>
 
 <body>
-    <header class="navbar__header">
-        <div class="navbar__container">
-            <span class="navbar__toggle" id="navbar-toggle">
-                <i class="feather icon-menu"></i>
-            </span>
-            <a href="#"> <img src=" ./svg/logo.svg" alt="Logo Cari Resto" class="logo"></a>
-            <nav class="main__nav">
-                <ul id="nav-list">
-                    <li><a href="#" class="nav-links">Home</a></li>
-                    <li><a href="#" class="nav-links">Favorites</a></li>
-                    <li><a href="https://www.linkedin.com/in/utrodus-said/" class="nav-links" target="_blank">About
-                            Us</a>
-                    </li>
-                </ul>
-            </nav>
+    <header >
+        <div class="app__bar">
+            <a id="menu__button" href="#">☰</a>
+            <a href="#" class="logo"> <img src=" ./svg/logo.svg" alt="Logo Cari Resto"></a>
         </div>
+        <nav id="app__menu" >
+            <ul>
+                <li><a href="#" class="nav-links active">Home</a></li>
+                <li><a href="#" class="nav-links">Favorites</a></li>
+                <li><a href="https://www.linkedin.com/in/utrodus-said/" class="nav-links" target="_blank">About
+                        Us</a>
+                </li>
+            </ul>
+        </nav>
     </header>
-    <h1>Restaurant Apps Starter Project</h1>
-    <img src="./images/heros/hero-image_4.jpg" alt="hero-image">
+    <main>
+        <article class="jumbotron">
+            <section class="jumbotron__content">
+                <h2>Catalog Restaurant</h2>
+                <h1>Choose The Best RestaurantsChoose
+                    The Best
+                    Restaurants
+                    in Indonesia. in Indonesia.</h1>
+            </section>
+        </article>
+    </main>
 </body>
 
 </html>
