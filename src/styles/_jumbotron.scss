@@ -1,13 +1,32 @@
 .jumbotron {
     display: flex;
+    justify-content: center;
     align-items: center;
-    min-height: 400px;
+    min-height: 450px;
     width: 100%;
-    text-align: center;
-    background-image: url("../public/images/heros/hero-image_4.jpg");
+    background-image: url("../public/images/heros/hero-image.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    
+    box-shadow: inset 0 0 0 100vw rgba(44, 42, 42, 0.7);
+    &:hover {
+        box-shadow: inset 0 0 0 100vw rgba(44, 42, 42, 0.6);
+    }
+    .jumbotron__content {
+        color: $white;
+        text-align: center;
+        h2 {
+            padding: 0px 3rem;
+            font-weight: bold;
+            font-size: 2em;
+            margin-bottom: 1.5rem;
+        }
+        h3 {
+            padding: 0px 0.5rem;
+            font-family: $DMSans;
+            font-weight: 300;
+            font-size: 1.1em;
+        }
+    }
 }

@@ -1,0 +1,28 @@
+button {
+    &.primary__button {
+        margin: 2.5rem 0;
+        width: 13.167em;
+        height: 3.5em;
+        border: 2px solid $primaryButtonColor;
+        box-sizing: border-box;
+        background: none;
+        font-family: $DMSans;
+        font-size: 1em;
+        color: $primaryButtonColor;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 26px;
+        cursor: pointer;
+    }
+}
+// main {
+//     .content {
+//         /*
+//     *** JUMBOTRON COMPONENT
+//     */
+
+//         /*
+//     *** BUTTON COMPONENT
+//     */
+//     }
+// }

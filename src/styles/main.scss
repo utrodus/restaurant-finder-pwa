@@ -41,11 +41,11 @@ img {
     text-decoration: none;
 }
 
+
+
 @import "colors";
 @import "fonts";
+@import "styles";
 @import "header";
-@import "responsive";
 @import "jumbotron";
-/* font-family: 'Caveat', cursive;
-font-family: 'DM Sans', sans-serif;
-font-family: 'Work Sans', sans-serif; */
+@import "responsive";
