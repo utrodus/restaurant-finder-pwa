@@ -15,14 +15,55 @@ button {
         cursor: pointer;
     }
 }
-// main {
-//     .content {
-//         /*
-//     *** JUMBOTRON COMPONENT
-//     */
 
-//         /*
-//     *** BUTTON COMPONENT
-//     */
-//     }
-// }
+hr {
+    &.separator {
+        width: 5rem;
+        border: 2px solid $separatorColor;
+        margin: 1.3rem 0;
+    }
+}
+
+main {
+    width: 100%;
+    margin: 0 auto;
+    .content {
+        .featured {
+            .featured__img {
+                margin: 4rem 0 1rem 0;
+            }
+            .featured__content {
+                h1 {
+                    font-size: 1.9em;
+                    color: $black;
+                    font-weight: bold;
+                    line-height: 40px;
+                }
+                p {
+                    font-size: .9em;
+                    color: $lightBlack;
+                    font-family: $DMSans;
+                    font-weight: 300;
+                    line-height: 32px;
+                }
+            }
+        }
+        .restaurants {
+            padding: 1.3rem 0;
+            background-color: $bodyContentColor;
+            h1 {
+                font-size: 1.9em;
+                color: $black;
+                font-weight: bold;
+                line-height: 40px;
+            }
+            p {
+                font-size: .9em;
+                color: $lightBlack;
+                font-family: $DMSans;
+                font-weight: 300;
+                line-height: 32px;
+            }
+        }
+    }
+}
