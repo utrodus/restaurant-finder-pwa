@@ -13,6 +13,11 @@ button {
         font-weight: bold;
         line-height: 26px;
         cursor: pointer;
+        &:hover{
+            background-color: #e0ad3d;
+            border: none;
+            color: white;
+        }
     }
 }
 
