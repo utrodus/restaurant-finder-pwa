@@ -48,6 +48,10 @@ header {
                     &.active{
                         color: $activeLinkColor;
                     }
+                    &:hover{
+                        color: $activeLinkColor;
+                    }
+                    
                 }
             }
         }
