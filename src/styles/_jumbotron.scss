@@ -1,7 +1,4 @@
 .jumbotron {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 450px;
     width: 100%;
     background-image: url("../public/images/heros/hero-image.jpg");
@@ -18,7 +15,7 @@
         color: $white;
         text-align: center;
         h1 {
-            padding: 2px 3rem;
+            padding: 2px 1.6rem;
             font-weight: bold;
             font-size: 2.5em;
             margin-bottom: 1.5rem;
