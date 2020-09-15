@@ -3,21 +3,22 @@ button {
         margin: 2.5rem 0;
         width: 13.167em;
         height: 3.5em;
-        border: 2px solid $primaryButtonColor;
         box-sizing: border-box;
+        border: 2px solid $primaryButtonColor;
         background: none;
+        color: $primaryButtonColor;
         font-family: $DMSans;
         font-size: 1em;
-        color: $primaryButtonColor;
         font-style: normal;
         font-weight: bold;
         line-height: 26px;
         cursor: pointer;
-        &:hover{
+        &:hover {
             background-color: #e0ad3d;
             border: none;
             color: white;
         }
+        
     }
 }
 
@@ -72,8 +73,9 @@ main {
             a {
                 @include reset__link;
             }
+
             .restaurant__item {
-                margin: 16px 0;
+                margin: 2.5rem 0;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
                 background-color: $white;
                 width: 100%;
