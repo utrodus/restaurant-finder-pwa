@@ -4,8 +4,13 @@ header {
     a {
         @include reset__link;
     }
-
+    .header__content {
+        display: flex;
+        width: 100%;
+        max-width: 1200px;
+    }
     .app__bar {
+        width: 100%;
         padding: 15px;
         max-width: 100%;
         margin: 0 auto;
@@ -31,6 +36,7 @@ header {
         width: 100%;
         height: 100%;
         position: absolute;
+        top: 4.4rem;
         transform: translate(-100%, 0);
         transition: transform 0.3s ease-in-out;
         &.open {
@@ -41,7 +47,7 @@ header {
             list-style-type: none;
             padding: 0 16px;
             li {
-                padding: 1rem 0 1rem 1.1rem;
+                padding: 1rem 0 1rem 0;
                 a {
                     width: 100%;
                     text-decoration: none;
