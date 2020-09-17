@@ -7,8 +7,9 @@ const Render = () => {
 
     restaurantsData.restaurants.forEach(item => {
 
-        restaurants += `<div class="restaurant__item">
+        restaurants += `
         <a href="#">
+        <div class="restaurant__item">
             <img class="thumbnail"
                 src="${item.pictureId}"
                 alt="${item.name}">
@@ -25,8 +26,9 @@ const Render = () => {
                     <p class="address">${item.rating}</p>
                 </div>
             </div>
+            </div>
         </a>
-    </div>`;
+    `;
     });
     restaurantList.innerHTML = restaurants;
 
