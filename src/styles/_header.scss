@@ -28,6 +28,9 @@ header {
                 width: 6.188rem;
                 margin-right: 1.1rem;
             }
+            &:focus {
+                outline: 1px solid $activeLinkColor;
+            }
         }
     }
 
@@ -59,6 +62,9 @@ header {
                     }
                     &:hover {
                         color: $activeLinkColor;
+                    }
+                    &:focus {
+                        outline: 1px solid $activeLinkColor;
                     }
                 }
             }
