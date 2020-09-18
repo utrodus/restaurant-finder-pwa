@@ -10,7 +10,7 @@
         align-content: center;
         .app__bar {
             padding: 1rem;
-            flex-basis: 35%;
+            flex-basis: 30%;
             flex-wrap: wrap;
             #menu__button {
                 display: none;
@@ -26,7 +26,7 @@
 
         nav#app__menu {
             background-color: $appBarColor;
-            flex-basis: 65%;
+            flex-basis: 70%;
             transform: translate(0, 0);
             position: static;
             ul {
@@ -186,9 +186,9 @@
         justify-content: center;
         align-items: center;
         align-content: center;
-        padding: .2rem 4rem;
+        padding: 0.2rem 4rem;
         .app__bar {
-            flex-basis: 25%;
+            flex-basis: 30%;
             flex-wrap: wrap;
             #menu__button {
                 display: none;
@@ -202,7 +202,7 @@
         }
 
         nav#app__menu {
-            flex-basis: 65%;
+            flex-basis: 70%;
             background-color: $appBarColor;
             transform: translate(0, 0);
             position: static;
