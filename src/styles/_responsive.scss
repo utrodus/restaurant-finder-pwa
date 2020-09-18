@@ -3,15 +3,14 @@
         padding: 2.5rem 4rem !important;
     }
     header {
+        padding: 0.2rem 2rem;
         display: flex;
         justify-content: center;
         align-items: center;
         align-content: center;
-        padding: 0.5rem 0;
         .app__bar {
             padding: 1rem;
-            max-width: 100%;
-
+            flex-basis: 35%;
             flex-wrap: wrap;
             #menu__button {
                 display: none;
@@ -27,7 +26,7 @@
 
         nav#app__menu {
             background-color: $appBarColor;
-            width: 100%;
+            flex-basis: 65%;
             transform: translate(0, 0);
             position: static;
             ul {
@@ -36,9 +35,10 @@
                 list-style-type: none;
                 margin-top: 0;
                 li {
-                    padding: 1.2rem 0 1rem 0;
-                    a {                    
-                        padding: 0.8em 1.5em;
+                    a {
+                        display: inline-block;
+                        min-width: 44px;
+                        padding: 1.1em 0.5em;
                         text-decoration: none;
                         font-size: 1em;
                         color: white;
@@ -186,11 +186,9 @@
         justify-content: center;
         align-items: center;
         align-content: center;
-        padding: 0.5rem 4rem;
+        padding: .2rem 4rem;
         .app__bar {
-            padding: 10px;
-            max-width: 100%;
-
+            flex-basis: 25%;
             flex-wrap: wrap;
             #menu__button {
                 display: none;
@@ -204,20 +202,21 @@
         }
 
         nav#app__menu {
+            flex-basis: 65%;
             background-color: $appBarColor;
-            width: 100%;
             transform: translate(0, 0);
             position: static;
+            padding: 0 1.5rem;
             ul {
                 display: flex;
                 justify-content: flex-end;
                 list-style-type: none;
                 margin-top: 0;
                 li {
-                    padding: 1rem 0 1rem 0;
                     a {
-                        padding: 0.8em 1.5em;
-
+                        display: inline-block;
+                        min-width: 44px;
+                        padding: 1.1em 0.5em;
                         text-decoration: none;
                         font-size: 1em;
                         color: white;
@@ -348,53 +347,6 @@
 }
 
 @media screen and (min-width: 1200px) {
-    header {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        padding: 0.5rem 4rem;
-        .app__bar {
-            padding: 10px;
-            max-width: 100%;
-
-            flex-wrap: wrap;
-            #menu__button {
-                display: none;
-            }
-            .logo {
-                margin: 0;
-                img {
-                    width: 6.188rem;
-                }
-            }
-        }
-
-        nav#app__menu {
-            background-color: $appBarColor;
-            width: 100%;
-            transform: translate(0, 0);
-            position: static;
-            ul {
-                display: flex;
-                justify-content: flex-end;
-                list-style-type: none;
-                margin-top: 0;
-                li {
-                    a {
-                        padding: 0.8em 1.5em;
-
-                        text-decoration: none;
-                        font-size: 1em;
-                        color: white;
-                        &.active {
-                            color: $activeLinkColor;
-                        }
-                    }
-                }
-            }
-        }
-    }
     .container {
         max-width: 1200px;
         margin: 0 auto;
