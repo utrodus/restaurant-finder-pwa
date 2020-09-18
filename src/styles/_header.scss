@@ -11,14 +11,14 @@ header {
     }
     .app__bar {
         width: 100%;
-        padding: 15px;
+        padding: 0.8rem;
         max-width: 100%;
         margin: 0 auto;
         display: flex;
         align-items: center;
         flex-wrap: wrap;
         #menu__button {
-            margin-left: 1rem;
+            padding-left: 0.3em;
             color: $white;
             font-size: 1.9rem;
             width: 2.8rem;
@@ -50,11 +50,11 @@ header {
         ul {
             margin-top: 1.3em;
             list-style-type: none;
-            padding: 0 16px;
             li {
-                padding: 1rem 0 1rem 0;
                 a {
-                    width: 100%;
+                    display: inline-block;
+                    margin-left: 1rem;
+                    padding: 1.5rem 1rem;
                     text-decoration: none;
                     font-size: 1.3em;
                     color: white;
