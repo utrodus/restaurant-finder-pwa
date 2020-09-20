@@ -1,4 +1,4 @@
-import restaurantsData from "./restaurants-data.js";
+import restaurantsData from '../DATA.json';
 
 const Render = () => {
     const restaurantList = document.getElementById("restaurants__list");
