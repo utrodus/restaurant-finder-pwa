@@ -1,15 +1,15 @@
-import restaurantsData from '../DATA.json';
+import restaurantsData from "../DATA.json";
 
 const Render = () => {
-    const restaurantList = document.getElementById("restaurants__list");
+  const restaurantList = document.getElementById("restaurants__list");
 
-    let restaurants = '';
+  let restaurants = "";
 
-    restaurantsData.restaurants.forEach(item => {
-
-        restaurants += `
+  restaurantsData.restaurants.forEach((item) => {
+    restaurants += `
         <a href="#">
         <div class="restaurant__item">
+
             <img class="thumbnail"
                 src="${item.pictureId}"
                 alt="${item.name}">
@@ -18,20 +18,19 @@ const Render = () => {
                 </h1>
                 <p class="description">${item.description}</p>
                 <div class="restaurant__address">
-                    <img src="./images/map-marker.png" alt="Map Marker">
+                    <i class="lni lni-map-marker marker" aria-hidden="true"></i>
                     <p class="address">${item.city}</p>
                 </div>
                 <div class="restaurant__rating">
-                    <img src="./images/star.png" alt="Rating Star">
+                    <i class="lni lni-star-filled star" aria-hidden="true"></i>
                     <p class="address">${item.rating}</p>
                 </div>
             </div>
             </div>
         </a>
     `;
-    });
-    restaurantList.innerHTML = restaurants;
-
-}
+  });
+  restaurantList.innerHTML = restaurants;
+};
 
 export default Render;
