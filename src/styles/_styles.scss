@@ -1,169 +1,193 @@
 .skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background-color: #e0ad3d;
-    color: white;
-    padding: 8px;
-    z-index: 100;
-    &:focus {
-        top: 0;
-        outline: 1px solid $activeLinkColor;
-    }
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #e0ad3d;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  &:focus {
+    top: 0;
+    outline: 1px solid $activeLinkColor;
+  }
 }
 
 a {
-    &.primary__button {
-        @include reset__link;
-        display: inline-block;
-        margin: 2.5rem 0;
-        padding: 0.8rem 3.7rem;
-        box-sizing: border-box;
-        border: 2px solid $primaryButtonColor;
-        background: none;
-        color: $primaryButtonColor;
-        font-family: $DMSans;
-        font-size: 1em;
-        font-style: normal;
-        font-weight: bold;
-        line-height: 26px;
-        cursor: pointer;
-        &:hover {
-            background-color: #e0ad3d;
-            color: white;
-        }
-        &:focus {
-            outline: 1px solid $activeLinkColor;
-            background-color: #e0ad3d;
-            color: white;
-        }
+  &.primary__button {
+    @include reset__link;
+    display: inline-block;
+    margin: 2.5rem 0;
+    padding: 0.8rem 3.7rem;
+    box-sizing: border-box;
+    border: 2px solid $primaryButtonColor;
+    background: none;
+    color: $primaryButtonColor;
+    font-family: $DMSans;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 26px;
+    cursor: pointer;
+    &:hover {
+      background-color: #e0ad3d;
+      color: white;
     }
+    &:focus {
+      outline: 1px solid $activeLinkColor;
+      background-color: #e0ad3d;
+      color: white;
+    }
+  }
 }
 
 hr {
-    &.separator {
-        width: 5rem;
-        border: 2px solid $separatorColor;
-        margin: 1.3rem 0;
-    }
+  &.separator {
+    width: 5rem;
+    border: 2px solid $separatorColor;
+    margin: 1.3rem 0;
+  }
 }
 
 main {
-    width: 100%;
-    margin: 0 auto;
-    .content {
-        .featured {
-            .featured__img {
-                margin: 4rem 0 1rem 0;
+  width: 100%;
+  margin: 0 auto;
+  .content {
+    .featured {
+      .featured__img {
+        margin: 4rem 0 1rem 0;
+      }
+      .featured__content {
+        h1 {
+          font-size: 1.9em;
+          color: $black;
+          font-weight: bold;
+          line-height: 40px;
+        }
+        p {
+          font-size: 0.9em;
+          color: $lightBlack;
+          font-family: $DMSans;
+          font-weight: 300;
+          line-height: 32px;
+        }
+      }
+    }
+    .restaurants {
+      padding: 1.3rem 0;
+      background-color: $bodyContentColor;
+      h1 {
+        font-size: 1.9em;
+        color: $black;
+        font-weight: bold;
+        line-height: 40px;
+      }
+      p {
+        font-size: 0.9em;
+        color: $lightBlack;
+        font-family: $DMSans;
+        font-weight: 300;
+        line-height: 32px;
+      }
+      a {
+        @include reset__link;
+      }
+      .restaurants__list {
+        padding: 0 2rem;
+        a {
+          &:focus {
+            outline: 3px solid $activeLinkColor;
+          }
+          .restaurant__item {
+            position: relative;
+            margin: 2rem 0;
+            background-color: $white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            button {
+              &.favorite__btn {
+                box-shadow: 0px 3px 5px rgba(85, 85, 85, 0.23);
+                display: inline-block;
+                position: absolute;
+                top: 148px;
+                left: 200px;
+                background-color: #ffffff;
+                color: #bfbfbf;
+                font-size: 1.3em;
+                border: 0;
+                border-radius: 50%;
+                width: 45px;
+                height: 45px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
             }
-            .featured__content {
-                h1 {
-                    font-size: 1.9em;
-                    color: $black;
-                    font-weight: bold;
-                    line-height: 40px;
+            .thumbnail {
+              max-height: 11rem;
+              object-fit: cover;
+            }
+            .content {
+              padding: 15px 20px 10px 20px;
+
+              h1 {
+                font-size: 1.1em;
+                line-height: 28px;
+                margin-bottom: 0.5rem;
+                display: block;
+                display: -webkit-box;
+                line-height: 1.6em;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: clip;
+              }
+              p {
+                position: relative;
+                &.description {
+                  display: block;
+                  display: -webkit-box;
+                  max-width: 100%;
+                  height: 45px;
+                  margin-bottom: 0.5rem;
+                  font-size: 0.85em;
+                  line-height: 1.6em;
+                  -webkit-line-clamp: 2;
+                  -webkit-box-orient: vertical;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                }
+              }
+              .restaurant__address,
+              .restaurant__rating {
+                padding: 0.2rem 0;
+                display: flex;
+                align-items: center;
+                .marker {
+                  margin: 0 0.5rem 0 0;
+                  i {
+                    &.lni-map-marker {
+                      color: #ff4c54;
+                    }
+                  }
+                }
+                i {
+                  &.star {
+                    margin: 0 0.5rem 0 0;
+                    color: #fbbf36;
+                  }
                 }
                 p {
-                    font-size: 0.9em;
-                    color: $lightBlack;
-                    font-family: $DMSans;
-                    font-weight: 300;
-                    line-height: 32px;
+                  font-size: 0.75em;
+                  line-height: normal;
                 }
+              }
             }
+          }
         }
-        .restaurants {
-            padding: 1.3rem 0;
-            background-color: $bodyContentColor;
-            h1 {
-                font-size: 1.9em;
-                color: $black;
-                font-weight: bold;
-                line-height: 40px;
-            }
-            p {
-                font-size: 0.9em;
-                color: $lightBlack;
-                font-family: $DMSans;
-                font-weight: 300;
-                line-height: 32px;
-            }
-            a {
-                @include reset__link;
-            }
-            .restaurants__list {
-                padding: 0 2rem;
-                a {
-                    &:focus {
-                        outline: 3px solid $activeLinkColor;
-                    }
-                    .restaurant__item {
-                        margin: 2rem 0;
-                        background-color: $white;
-                        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-                        width: 100%;
-                        border-radius: 8px;
-                        overflow: hidden;
-
-                        .thumbnail {
-                            max-height: 11rem;
-                            object-fit: cover;
-                        }
-                        .content {
-                            position: relative;
-                            padding: 15px 20px 10px 20px;
-                            h1 {
-                                font-size: 1.1em;
-                                line-height: 28px;
-                                margin-bottom: 0.5rem;
-                                display: block;
-                                display: -webkit-box;
-                                line-height: 1.6em;
-                                -webkit-line-clamp: 2;
-                                -webkit-box-orient: vertical;
-                                overflow: hidden;
-                                text-overflow: clip;
-                            }
-                            p {
-                                position: relative;
-                                &.description {
-                                    display: block;
-                                    display: -webkit-box;
-                                    max-width: 100%;
-                                    height: 45px;
-                                    margin-bottom: 0.5rem;
-                                    font-size: 0.85em;
-                                    line-height: 1.6em;
-                                    -webkit-line-clamp: 2;
-                                    -webkit-box-orient: vertical;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
-                                }
-                            }
-                            .restaurant__address,
-                            .restaurant__rating {
-                                padding: 0.2rem 0;
-                                display: flex;
-                                align-items: center;
-                                i {
-                                    margin: 0 0.5rem 0 0;
-                                    width: 14.81px;
-                                    &.marker{
-                                        color: #FF4C54;
-                                    }
-                                    &.star{
-                                        color: #FBBF36;
-                                    }
-                                }
-                                p {
-                                    font-size: 0.75em;
-                                    line-height: normal;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+      }
     }
+  }
 }

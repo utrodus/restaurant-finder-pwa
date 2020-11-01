@@ -9,7 +9,9 @@ const Render = () => {
     restaurants += `
         <a href="#">
         <div class="restaurant__item">
-
+            <button aria-label="add to favorite" id="favoriteButton" class="favorite__btn">
+                 <i class="lni lni-heart" aria-hidden="true"></i>
+            </button>
             <img class="thumbnail"
                 src="${item.pictureId}"
                 alt="${item.name}">
@@ -18,7 +20,9 @@ const Render = () => {
                 </h1>
                 <p class="description">${item.description}</p>
                 <div class="restaurant__address">
-                    <i class="lni lni-map-marker marker" aria-hidden="true"></i>
+                <div class="marker">
+                    <i class="lni lni-map-marker " aria-hidden="true"></i>
+                    </div>
                     <p class="address">${item.city}</p>
                 </div>
                 <div class="restaurant__rating">
