@@ -43,7 +43,7 @@ a {
 hr {
   &.separator {
     width: 5rem;
-    border: 2px solid $separatorColor;
+    border: 2px solid $orange;
     margin: 1.3rem 0;
   }
 }
@@ -190,6 +190,104 @@ main {
             }
           }
         }
+      }
+    }
+  }
+  article.detail {
+    .restaurant__title {
+      color: $black;
+      font-size: 2.3em;
+      margin: 1.5rem 0 0;
+    }
+    button {
+      &.favorite__btn {
+        box-shadow: 0px 3px 5px rgba(85, 85, 85, 0.23);
+        display: inline-block;
+        position: fixed;
+        bottom: 85px;
+        right: 30px;
+        background-color: #ffffff;
+        color: #bfbfbf;
+        font-size: 1.3em;
+        border: 0;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .restaurant_img {
+      border-radius: 8px;
+    }
+    .restaurant__address {
+      font-family: $DMSans;
+      margin-top: 0.5rem;
+    }
+    .restaurant__categories {
+      color: $lightBlack;
+      font-weight: 600;
+      font-size: 1.6em;
+      margin: 1.9rem 0 1rem;
+    }
+    .category__wrapper {
+      display: flex;
+      .category {
+        margin-right: 1rem;
+        display: inline-block;
+        background-color: $orange;
+        padding: 0.5rem 1.5rem;
+        border-radius: 8px;
+        p {
+          color: white;
+        }
+      }
+    }
+    p.description {
+      margin: 2rem 0;
+      font-family: $DMSans;
+      color: $lightBlack;
+    }
+    .detail__subtitle {
+      margin-top: 2rem;
+      p {
+        font-family: $WorkSans;
+        font-size: 1.2em;
+        font-weight: bold;
+        color: $black;
+      }
+      hr.separator {
+        margin: 1rem 0 !important;
+      }
+    }
+    .menu {
+      margin-top: 2rem;
+      ul {
+        margin-left: 1.4rem;
+        li {
+          font-family: $DMSans;
+          font-weight: 500;
+          color: $lightBlack;
+          margin: 0.5rem 0;
+          font-size: 0.95em;
+          list-style: none;
+          &:before {
+            content: "·";
+            font-size: 4.5rem;
+            padding-right: 0.5rem;
+            vertical-align: middle;
+            line-height: 1.5rem;
+          }
+        }
+      }
+    }
+    .rating {
+      p.total__rating {
+        font-size: 2.5em;
+        font-weight: bold;
+        color: $black;
       }
     }
   }
