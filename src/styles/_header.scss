@@ -1,75 +1,75 @@
 header {
-    background-color: $appBarColor;
-    font-family: $WorkSans;
-    a {
-        @include reset__link;
+  background-color: $appBarColor;
+  font-family: $WorkSans;
+  a {
+    @include reset__link;
+  }
+  .header__content {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+  }
+  .app__bar {
+    width: 100%;
+    padding: 0.8rem;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    #menu__button {
+      padding-left: 0.3em;
+      color: $white;
+      font-size: 1.9rem;
+      width: 2.8rem;
+      height: 2.8rem;
     }
-    .header__content {
-        display: flex;
-        width: 100%;
-        max-width: 1200px;
+    .logo {
+      margin: 0 auto;
+      img {
+        width: 6.188rem;
+        margin-right: 1.1rem;
+      }
+      &:focus {
+        outline: 1px solid $activeLinkColor;
+      }
     }
-    .app__bar {
-        width: 100%;
-        padding: 0.8rem;
-        max-width: 100%;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        #menu__button {
-            padding-left: 0.3em;
-            color: $white;
-            font-size: 1.9rem;
-            width: 2.8rem;
-            height: 2.8rem;
-        }
-        .logo {
-            margin: 0 auto;
-            img {
-                width: 6.188rem;
-                margin-right: 1.1rem;
-            }
-            &:focus {
-                outline: 1px solid $activeLinkColor;
-            }
-        }
-    }
+  }
 
-    nav#app__menu {
-        background-color: $drawerColor;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 4.4rem;
-        transform: translate(-100%, 0);
-        transition: transform 0.3s ease-in-out;
-        &.open {
-            transform: translate(0, 0);
-        }
-        ul {
-            margin-top: 1.3em;
-            list-style-type: none;
-            li {
-                a {
-                    display: inline-block;
-                    margin-left: 1rem;
-                    padding: 1.5rem 1rem;
-                    text-decoration: none;
-                    font-size: 1.3em;
-                    color: white;
-
-                    &.active {
-                        color: $activeLinkColor;
-                    }
-                    &:hover {
-                        color: $activeLinkColor;
-                    }
-                    &:focus {
-                        outline: 1px solid $activeLinkColor;
-                    }
-                }
-            }
-        }
+  nav#app__menu {
+    background-color: $drawerColor;
+    width: 75%;
+    height: 100%;
+    position: absolute;
+    top: 4.4rem;
+    transform: translate(-100%, 0);
+    transition: transform 0.3s ease-in-out;
+    &.open {
+      transform: translate(0, 0);
     }
+    ul {
+      margin-top: 1.3em;
+      list-style-type: none;
+      li {
+        a {
+          display: inline-block;
+          margin-left: 1rem;
+          padding: 1.5rem 1rem;
+          text-decoration: none;
+          font-size: 1.3em;
+          color: white;
+
+          &.active {
+            color: $activeLinkColor;
+          }
+          &:hover {
+            color: $activeLinkColor;
+          }
+          &:focus {
+            outline: 1px solid $activeLinkColor;
+          }
+        }
+      }
+    }
+  }
 }
