@@ -10,7 +10,7 @@ const Detail = {
             <img src="https://restaurant-api.dicoding.dev/images/small/14" class="restaurant_img" alt="restaurant img">
               <button aria-label="add to favorite" id="favoriteButton" class="favorite__btn">
                       <i class="lni lni-heart" aria-hidden="true"></i>
-                  </button>
+              </button>
             <h2 class="restaurant__title">Melting Pot</h2>
             <p class="restaurant__address">Jln. Pandeglang no 19, Medan</p>
             <h3 class="restaurant__categories">Categories</h3>
@@ -53,6 +53,26 @@ const Detail = {
           </div>
           <div class="rating">
             <p class="total__rating">5.0</p>
+          </div>
+          <div class="detail__subtitle">
+                  <p>Customer Reviews</p>
+                  <hr class="separator" />
+          </div>
+          <div class="customer__reviews">
+            <div class="review_item">
+              <p class="reviewer_name">Utrodus Said</p>
+              <p class="review_date">13 November 2019</p>
+              <p class="review_content">"Went on, still gaining velocity, the palpitation of night and day merged into one continuous</p>
+            </div>
+            <div class="review_item">
+              <p class="reviewer_name">Utrodus Said</p>
+              <p class="review_date">13 November 2019</p>
+              <p class="review_content">"Went on, still gaining velocity, the palpitation of night and day merged into one continuous</p>
+            </div>
+            <div class="review_form">
+
+            </div>
+
           </div>
 
           </div>

@@ -12,6 +12,12 @@
   }
 }
 
+@mixin card-style {
+  background-color: $white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
 a {
   &.primary__button {
     @include reset__link;
@@ -98,13 +104,11 @@ main {
             outline: 3px solid $activeLinkColor;
           }
           .restaurant__item {
-            position: relative;
-            margin: 2rem 0;
-            background-color: $white;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            @include card-style;
             width: 100%;
             height: 100%;
-            border-radius: 8px;
+            position: relative;
+            margin: 2rem 0;
             overflow: hidden;
             button {
               &.favorite__btn {
@@ -202,21 +206,24 @@ main {
     button {
       &.favorite__btn {
         box-shadow: 0px 3px 5px rgba(85, 85, 85, 0.23);
-        display: inline-block;
         position: fixed;
-        bottom: 85px;
+        bottom: 60px;
         right: 30px;
-        background-color: #ffffff;
-        color: #bfbfbf;
-        font-size: 1.3em;
+        background-color: #cacaca;
+        color: #ffffff;
+        font-size: 1.2em;
         border: 0;
         border-radius: 50%;
-        width: 45px;
-        height: 45px;
+        width: 50px;
+        height: 50px;
         cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
+        &.favorited__btn {
+          background-color: #ff4040;
+          color: #ffffff;
+        }
       }
     }
     .restaurant_img {
@@ -251,7 +258,7 @@ main {
       color: $lightBlack;
     }
     .detail__subtitle {
-      margin-top: 2rem;
+      margin-top: 3rem;
       p {
         font-family: $WorkSans;
         font-size: 1.2em;
@@ -288,6 +295,38 @@ main {
         font-size: 2.5em;
         font-weight: bold;
         color: $black;
+      }
+    }
+    .customer__reviews {
+      .review_item {
+        @include card-style;
+        margin: 0.8rem 0;
+        padding: 1rem;
+        p {
+          &.reviewer_name {
+            font-family: $WorkSans;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1em;
+            color: $black;
+          }
+          &.review_date {
+            font-family: $WorkSans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 0.9em;
+            line-height: 32px;
+            color: #eb9125;
+          }
+          &.review_content {
+            font-family: $DMSans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1em;
+            line-height: 19px;
+            color: #676767;
+          }
+        }
       }
     }
   }
