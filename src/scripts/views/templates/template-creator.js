@@ -1,10 +1,11 @@
-import API_ENDPOINT from '../../globals/api-endpoint';
+import API_ENDPOINT from "../../globals/api-endpoint";
 const createRestaurantItemTemplate = (restaurant) => `
-        <a href="${`/#/detail/${restaurant.id}`}">
-            <div class="restaurant__item">
-                <button aria-label="add to favorite" id="favoriteButton" class="favorite__btn">
+        <div class="restaurant__item__wrapper">
+        <button aria-label="add to favorite" id="favoriteButton" class="favorite__btn">
                     <i class="lni lni-heart" aria-hidden="true"></i>
                 </button>
+        <a href="${`/#/detail/${restaurant.id}`}">
+            <div class="restaurant__item">
                 <img class="thumbnail"
                     src="${API_ENDPOINT.PICTURE(restaurant.pictureId, "small")}"
                     alt="${restaurant.name}">
@@ -25,6 +26,7 @@ const createRestaurantItemTemplate = (restaurant) => `
                 </div>
                 </div>
         </a>
+        </div>
 `;
 
 export default createRestaurantItemTemplate;
