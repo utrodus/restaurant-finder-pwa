@@ -11,7 +11,7 @@ const Detail = {
           <div class="restaurant_img">
           <img
             src="https://restaurant-api.dicoding.dev/images/small/14"
-            alt="Gambar Restaurant Melting Pot"  tabindex="0"
+            alt="Melting Pot"
           />
           </div>
           <div class="restaurant__info">
@@ -70,12 +70,13 @@ const Detail = {
             </div>
           </section>
 
-          <div class="customer__reviews">
+
+          <section class="customer__reviews" >
            <div class="detail__subtitle">
             <p tabindex="0">Customer Reviews</p>
             <hr class="separator" />
-          </div>
-            <div class="review_item" >
+
+            <div class="review_item" tabindex="0" >
               <p class="reviewer_name" tabindex="0">Utrodus Said</p>
               <p class="review_date" tabindex="0">13 November 2019</p>
               <p class="review_content" tabindex="0">
@@ -91,8 +92,8 @@ const Detail = {
                 day merged into one continuous
               </p>
             </div>
-              <form class="review_form" tabindex="0">
-              <label for="name" tabindex="0">Name</label>
+              <form class="review_form" >
+              <label for="name" >Name</label>
               <input
                 id="name"
                 aria-label="Your name"
@@ -100,7 +101,7 @@ const Detail = {
                 class="input_name"
                 tabindex="0"
               />
-              <label for="description" tabindex="0">Your Review</label>
+              <label for="description" >Your Review</label>
               <textarea
                 id="description"
                 aria-label="Your Review"
@@ -111,7 +112,7 @@ const Detail = {
               <button class="review_btn" tabindex="0">Add Review</button>
            </form>
           </div>
-        </div>
+        </section>
       </article>
 
     `;
