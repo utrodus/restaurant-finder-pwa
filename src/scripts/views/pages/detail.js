@@ -7,43 +7,38 @@ const Detail = {
 
        <article id="detail" class="detail">
         <div class="container">
+          <div class="main__content">
+          <div class="restaurant_img">
           <img
             src="https://restaurant-api.dicoding.dev/images/small/14"
-            class="restaurant_img"
             alt="restaurant img"
           />
-          <button
+          </div>
+          <div class="restaurant__info">
+            <h2 class="restaurant__title">Melting Pot</h2>
+            <p class="restaurant__address">Jln. Pandeglang no 19, Medan</p>
+            <h3 class="restaurant__categories">Categories</h3>
+            <div class="category__wrapper">
+              <div class="category">
+                <p>Italia</p>
+              </div>
+              <div class="category">
+                <p>Modern</p>
+              </div>
+            </div>
+            <p class="description">
+             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
+            </p>
+          </div>
+          </div>
+           <button
             aria-label="add to favorite"
             id="favoriteButton"
             class="favorite__btn"
           >
             <i class="lni lni-heart" aria-hidden="true"></i>
           </button>
-          <h2 class="restaurant__title">Melting Pot</h2>
-          <p class="restaurant__address">Jln. Pandeglang no 19, Medan</p>
-          <h3 class="restaurant__categories">Categories</h3>
-          <div class="category__wrapper">
-            <div class="category">
-              <p>Italia</p>
-            </div>
-            <div class="category">
-              <p>Modern</p>
-            </div>
-          </div>
-          <p class="description">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-            Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
-            aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
-            imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
-            mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum
-            semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
-            porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
-            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
-            nulla ut metus varius laoreet.
-          </p>
+          <div class="secondary_content">
           <div class="menu">
             <div class="detail__subtitle">
               <p>Food Menu</p>
@@ -68,18 +63,22 @@ const Detail = {
               <li>Salad lengkeng</li>
             </ul>
           </div>
-          <div class="detail__subtitle">
-            <p>Rating Overview</p>
-            <hr class="separator" />
+          <div class="rating_overview">
+            <div class="detail__subtitle">
+              <p>Rating Overview</p>
+              <hr class="separator" />
+            </div>
+            <div class="rating">
+              <p class="total__rating">5.0</p>
+            </div>
+            </div>
           </div>
-          <div class="rating">
-            <p class="total__rating">5.0</p>
-          </div>
-          <div class="detail__subtitle">
+
+          <div class="customer__reviews">
+           <div class="detail__subtitle">
             <p>Customer Reviews</p>
             <hr class="separator" />
           </div>
-          <div class="customer__reviews">
             <div class="review_item">
               <p class="reviewer_name">Utrodus Said</p>
               <p class="review_date">13 November 2019</p>
@@ -96,23 +95,23 @@ const Detail = {
                 day merged into one continuous
               </p>
             </div>
-            <div class="review_form">
-              <p></p>
+              <form class="review_form">
               <label for="name">Name</label>
               <input
                 id="name"
                 aria-label="Your name"
-                placeholder="Type Your Name"
                 type="text"
+                class="input_name"
               />
-              <label for="description">Description</label>
+              <label for="description">Your Review</label>
               <textarea
                 id="description"
                 aria-label="Your Review"
-                placeholder="Type your review here"
+                class="input_description"
+                rows="5"
               ></textarea>
-              <button>Add Review</button>
-            </div>
+              <button class="review_btn">Add Review</button>
+           </form>
           </div>
         </div>
       </article>

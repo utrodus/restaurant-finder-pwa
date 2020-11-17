@@ -198,11 +198,13 @@ main {
     }
   }
   article.detail {
+    margin-top: 1.5rem;
     .restaurant__title {
+      margin-top: 1rem;
       color: $black;
-      font-size: 2.3em;
-      margin: 1.5rem 0 0;
+      font-size: 1.7em;
     }
+
     button {
       &.favorite__btn {
         box-shadow: 0px 3px 5px rgba(85, 85, 85, 0.23);
@@ -227,7 +229,9 @@ main {
       }
     }
     .restaurant_img {
-      border-radius: 8px;
+      img {
+        border-radius: 8px;
+      }
     }
     .restaurant__address {
       font-family: $DMSans;
@@ -244,16 +248,18 @@ main {
       .category {
         margin-right: 1rem;
         display: inline-block;
-        background-color: $orange;
-        padding: 0.5rem 1.5rem;
+        background-color: #efa349;
+        padding: 0.5rem 1.3rem;
         border-radius: 8px;
+        font-size: 0.9em;
+        font-weight: 500;
         p {
           color: white;
         }
       }
     }
     p.description {
-      margin: 2rem 0;
+      margin: 1.5rem 0;
       font-family: $DMSans;
       color: $lightBlack;
     }
@@ -269,34 +275,37 @@ main {
         margin: 1rem 0 !important;
       }
     }
-    .menu {
-      margin-top: 2rem;
-      ul {
-        margin-left: 1.4rem;
-        li {
-          font-family: $DMSans;
-          font-weight: 500;
-          color: $lightBlack;
-          margin: 0.5rem 0;
-          font-size: 0.95em;
-          list-style: none;
-          &:before {
-            content: "·";
-            font-size: 4.5rem;
-            padding-right: 0.5rem;
-            vertical-align: middle;
-            line-height: 1.5rem;
+    .secondary_content {
+      .menu {
+        margin-top: 2rem;
+        ul {
+          margin-left: 0.8rem;
+          li {
+            font-family: $DMSans;
+            font-weight: 500;
+            color: $lightBlack;
+            margin: 0.5rem 0;
+            font-size: 0.95em;
+            list-style: none;
+            &:before {
+              content: "·";
+              font-size: 4.5rem;
+              padding-right: 0.5rem;
+              vertical-align: middle;
+              line-height: 1.5rem;
+            }
           }
         }
       }
-    }
-    .rating {
-      p.total__rating {
-        font-size: 2.5em;
-        font-weight: bold;
-        color: $black;
+      .rating {
+        p.total__rating {
+          font-size: 2.5em;
+          font-weight: bold;
+          color: $black;
+        }
       }
     }
+
     .customer__reviews {
       .review_item {
         @include card-style;
@@ -325,6 +334,67 @@ main {
             font-size: 1em;
             line-height: 19px;
             color: #676767;
+          }
+        }
+      }
+    }
+    .review_form {
+      margin-top: 3rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .input_name,
+      .input_description {
+        width: 100%;
+        min-height: 1.8rem;
+        border: 1px solid #b1b1b1;
+        padding-left: 0.3rem;
+        border-radius: 4px;
+        font-family: $DMSans;
+        color: grey;
+      }
+
+      input {
+        margin-bottom: 0.5rem;
+      }
+      textarea {
+        padding: 0.5rem 1rem;
+      }
+
+      label {
+        font-family: $WorkSans;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.9em;
+        line-height: 32px;
+        color: #5a5a5a;
+      }
+
+      button {
+        &.review_btn {
+          margin: 1.5rem 0;
+          width: 100%;
+          @include reset__link;
+          display: inline-block;
+          padding: 0.5rem 3.7rem;
+          background-color: #e0ad3d;
+          color: white;
+          font-family: $DMSans;
+          font-size: 1em;
+          font-style: normal;
+          font-weight: bold;
+          line-height: 26px;
+          cursor: pointer;
+          border: none;
+          border-radius: 7px;
+          &:hover {
+            background-color: #c5952d;
+            color: white;
+          }
+          &:focus {
+            background-color: #ce9928;
+            color: white;
           }
         }
       }
