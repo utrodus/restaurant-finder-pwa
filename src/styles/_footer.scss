@@ -1,12 +1,13 @@
 footer {
-    padding: 1.5rem;
-    background-color: $footerColor;
-    p {
-        &.footer__copyright {
-            text-align: center;
-            color: white;
-            font-size: 0.9em;
-            font-weight: 300;
-        }
+  width: 100%;
+  padding: 1.5rem;
+  background-color: $footerColor;
+  p {
+    &.footer__copyright {
+      text-align: center;
+      color: white;
+      font-size: 0.9em;
+      font-weight: 300;
     }
+  }
 }
