@@ -1,3 +1,5 @@
+import RestaurantsDbSource from "../../data/restaurantsdb-source";
+import createRestaurantItemTemplate from "../templates/template-creator";
 const Favorites = {
   async render() {
     return `
@@ -18,6 +20,16 @@ const Favorites = {
 
   async afterRender() {
     // Fungsi ini akan dipanggil setelah render()
+    // Fungsi ini akan dipanggil setelah render()
+    const restaurants = await RestaurantsDbSource.restaurantsList();
+    const restaurantListContainer = document.getElementById(
+      "restaurants__list"
+    );
+    restaurants.forEach((restaurant) => {
+      restaurantListContainer.innerHTML += createRestaurantItemTemplate(
+        restaurant
+      );
+    });
   },
 };
 
