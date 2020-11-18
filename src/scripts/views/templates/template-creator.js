@@ -62,6 +62,13 @@ const createReviewItemTemplate = (review) => `
 </div>
 `;
 
+const createEmptyFavoritePageTemplate = () => `
+<p class="empty__favorite">
+<i class="lni lni-heart" aria-hidden="true"></i>
+
+Anda Belum Menambahkan Restaurant Ke Halaman Favorites</p>
+`;
+
 const createRestaurantDetailTemplate = (detail) => `
         <section class="container">
           <section class="main__content">
@@ -166,4 +173,4 @@ const createRestaurantDetailTemplate = (detail) => `
         </section>
 `;
 
-export { createRestaurantItemTemplate, createRestaurantDetailTemplate };
+export { createRestaurantItemTemplate, createRestaurantDetailTemplate, createEmptyFavoritePageTemplate };
