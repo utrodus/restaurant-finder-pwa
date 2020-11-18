@@ -122,6 +122,10 @@ main {
               display: flex;
               align-items: center;
               justify-content: center;
+              &.favorited__btn {
+                background-color: #ff4040;
+                color: #ffffff;
+              }
             }
           }
           a {
@@ -213,8 +217,8 @@ main {
         position: fixed;
         bottom: 60px;
         right: 30px;
-        background-color: #cacaca;
-        color: #ffffff;
+        background-color: #ffffff;
+        color: #bfbfbf;
         font-size: 1.2em;
         border: 0;
         border-radius: 50%;
