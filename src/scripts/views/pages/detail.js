@@ -6,9 +6,7 @@ const Detail = {
   async render() {
     return `
        <article id="detail" class="detail">
-
       </article>
-
     `;
   },
 

@@ -1,4 +1,7 @@
 import API_ENDPOINT from "../../globals/api-endpoint";
+const createCategoriesTemplate = (category) => `
+<p class="category" tabindex="0">${category.name}</p>
+`;
 const createRestaurantItemTemplate = (restaurant) => `
         <div class="restaurant__item__wrapper"  aria-label="restaurant item">
         <button aria-label="add to favorite" id="favoriteButton" class="favorite__btn" >
@@ -51,9 +54,10 @@ const createRestaurantDetailTemplate = (detail) => `
             <h2 class="restaurant__title" tabindex="0">${detail.name}</h2>
             <p class="restaurant__address" tabindex="0">${detail.address}</p>
             <h3 class="restaurant__categories" tabindex="0">Categories</h3>
-            <div class="category__wrapper" >
-                <p class="category" tabindex="0">Italia</p>
-                <p class="category" tabindex="0">Modern</p>
+            <div class="category__wrapper">
+            ${detail.categories
+              .map((category) => createCategoriesTemplate(category))
+              .join("")}                       
             </div>
             <p class="description" tabindex="0">
              ${detail.description}
@@ -148,4 +152,4 @@ const createRestaurantDetailTemplate = (detail) => `
         </section>
 `;
 
-export {createRestaurantItemTemplate, createRestaurantDetailTemplate};
+export { createRestaurantItemTemplate, createRestaurantDetailTemplate };
