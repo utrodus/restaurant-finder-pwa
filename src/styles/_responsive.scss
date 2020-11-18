@@ -261,6 +261,44 @@
           }
         }
       }
+      .favorites_restaurant {
+        padding: 2.3rem 0 5rem 0;
+        h1 {
+          font-size: 2.3em;
+          color: $black;
+          font-weight: bold;
+          line-height: 48px;
+        }
+        p {
+          font-size: 1.3em;
+          color: $lightBlack;
+          font-family: $DMSans;
+          font-weight: 300;
+          line-height: 32px;
+        }
+        a {
+          @include reset__link;
+        }
+        .restaurants__list {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-column-gap: 1.5em;
+          grid-row-gap: 2rem;
+          padding: 0 2.8rem;
+          .restaurant__item__wrapper {
+            margin: 0;
+            a {
+              .restaurant__item {
+                margin: 0;
+                .content {
+                  position: relative;
+                  padding: 15px 20px 10px 20px;
+                }
+              }
+            }
+          }
+        }
+      }
     }
     article.detail {
       .restaurant__title {
@@ -420,6 +458,13 @@
         max-width: 1200px;
       }
       .restaurants {
+        .restaurants__list {
+          margin: 0 auto;
+          max-width: 1200px;
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+      .favorites_restaurant {
         .restaurants__list {
           margin: 0 auto;
           max-width: 1200px;
