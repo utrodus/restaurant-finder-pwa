@@ -7,7 +7,9 @@ import "./components/app-footer";
 const app = new App({
   button: document.querySelector("#menu__button"),
   drawer: document.querySelector("#app__menu"),
-  content: document.querySelector("#primaryContent")
+  content: document.querySelector("#primaryContent"),
+  appmenu:document.getElementsByClassName("menu__item"),
+  activeMenu:document.getElementsByClassName("menu__item active"),
 });
 
 window.addEventListener("hashchange", () => {

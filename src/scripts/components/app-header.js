@@ -15,8 +15,8 @@ class AppHeader extends HTMLElement {
         </div>
         <nav id="app__menu">
           <ul>
-            <li><a href="#/home" class="active" tabindex="0">Home</a></li>
-            <li><a href="#/favorites" tabindex="0">Favorites</a></li>
+            <li><a href="#/home" class="menu__item active" tabindex="0">Home</a></li>
+            <li><a href="#/favorites" class="menu__item" tabindex="0">Favorites</a></li>
             <li>
               <a
                 href="https://www.linkedin.com/in/utrodus-said/"
