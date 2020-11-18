@@ -1,7 +1,5 @@
 import API_ENDPOINT from "../../globals/api-endpoint";
-const createCategoriesTemplate = (category) => `
-<p class="category" tabindex="0">${category.name}</p>
-`;
+
 const createRestaurantItemTemplate = (restaurant) => `
         <div class="restaurant__item__wrapper"  aria-label="restaurant item">
         <button aria-label="add to favorite" id="favoriteButton" class="favorite__btn" >
@@ -41,6 +39,29 @@ const createRestaurantItemTemplate = (restaurant) => `
         </a>
         </div>
 `;
+
+const createCategoryItemTemplate = (category) => `
+<p class="category" tabindex="0">${category.name}</p>
+`;
+
+const createMenuItemTemplate = (menu) => `
+<li tabindex="0">${menu.name}</li>
+`;
+
+const createReviewItemTemplate = (review) => `
+<div class="review_item" tabindex="0" >
+<p class="reviewer_name" tabindex="0">${
+  review.name == undefined ? "" : review.name
+}</p>
+<p class="review_date" tabindex="0">${
+  review.date == undefined ? "" : review.date
+}</p>
+<p class="review_content" tabindex="0">
+  ${review.review == undefined ? "" : review.review}  
+</p>
+</div>
+`;
+
 const createRestaurantDetailTemplate = (detail) => `
         <section class="container">
           <section class="main__content">
@@ -56,8 +77,8 @@ const createRestaurantDetailTemplate = (detail) => `
             <h3 class="restaurant__categories" tabindex="0">Categories</h3>
             <div class="category__wrapper">
             ${detail.categories
-              .map((category) => createCategoriesTemplate(category))
-              .join("")}                       
+              .map((category) => createCategoryItemTemplate(category))
+              .join("")}    
             </div>
             <p class="description" tabindex="0">
              ${detail.description}
@@ -78,10 +99,9 @@ const createRestaurantDetailTemplate = (detail) => `
               <hr class="separator" />
             </div>
             <ul>
-              <li tabindex="0">Paket rosemary</li>
-              <li tabindex="0">Toastie salmon</li>
-              <li tabindex="0">Bebek crepes</li>
-              <li tabindex="0">Salad lengkeng</li>
+            ${detail.menus.foods
+              .map((menu) => createMenuItemTemplate(menu))
+              .join("")}                
             </ul>
           </div>
           <div class="menu">
@@ -90,10 +110,9 @@ const createRestaurantDetailTemplate = (detail) => `
               <hr class="separator" />
             </div>
             <ul>
-              <li tabindex="0">Paket rosemary</li>
-              <li tabindex="0">Toastie salmon</li>
-              <li tabindex="0">Bebek crepes</li>
-              <li tabindex="0">Salad lengkeng</li>
+            ${detail.menus.drinks
+              .map((menu) => createMenuItemTemplate(menu))
+              .join("")} 
             </ul>
           </div>
           <div class="rating_overview">
@@ -113,14 +132,9 @@ const createRestaurantDetailTemplate = (detail) => `
             <p tabindex="0">Customer Reviews</p>
             <hr class="separator" />
             </div>
-            <div class="review_item" tabindex="0" >
-              <p class="reviewer_name" tabindex="0">Utrodus Said</p>
-              <p class="review_date" tabindex="0">13 November 2019</p>
-              <p class="review_content" tabindex="0">
-                "Went on, still gaining velocity, the palpitation of night and
-                day merged into one continuous
-              </p>
-            </div>
+            ${detail.customerReviews
+              .map((review) => createReviewItemTemplate(review))
+              .join("")} 
             <div class="review_item">
               <p class="reviewer_name" tabindex="0">Utrodus Said</p>
               <p class="review_date" tabindex="0">13 November 2019</p>
