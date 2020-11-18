@@ -100,9 +100,9 @@ main {
         .restaurant__item__wrapper {
           margin: 2rem 0;
           position: relative;
-           &:focus {
-              outline: 3px solid $activeLinkColor !important;
-            }
+          &:focus {
+            outline: 3px solid $activeLinkColor !important;
+          }
           button {
             &.favorite__btn {
               box-shadow: 0px 3px 5px rgba(85, 85, 85, 0.23);
@@ -247,8 +247,9 @@ main {
     }
     .category__wrapper {
       display: flex;
+      flex-wrap: wrap;
       p.category {
-        margin-right: 1rem;
+        margin: 0 1rem 0.8rem 0;
         display: inline-block;
         background-color: #efa349;
         padding: 0.5rem 1.3rem;
@@ -309,7 +310,7 @@ main {
     .customer__reviews {
       .review_item {
         @include card-style;
-        margin: 0.8rem 0;
+        margin: 2rem 0;
         padding: 1rem;
         p {
           &.reviewer_name {

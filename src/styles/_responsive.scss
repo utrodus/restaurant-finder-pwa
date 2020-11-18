@@ -296,7 +296,7 @@
         }
       }
       p.description {
-        margin: 2rem 0;
+        margin: 1rem 0;
       }
       .detail__subtitle {
         margin-top: 3rem;
@@ -322,7 +322,7 @@
         max-width: 60%;
         .review_item {
           @include card-style;
-          margin: 0.8rem 0;
+          margin: 1rem 0;
           padding: 1rem;
           p {
             &.reviewer_name {
