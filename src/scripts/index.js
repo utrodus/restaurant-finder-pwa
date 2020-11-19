@@ -3,6 +3,8 @@ import "../styles/index.scss";
 import App from "./views/app";
 import "./components/app-header";
 import "./components/app-footer";
+import RegSw from "./utils/reg-sw";
+
 
 const app = new App({
   button: document.querySelector("#menu__button"),
@@ -18,4 +20,5 @@ window.addEventListener("hashchange", () => {
 
 window.addEventListener("load", () => {
   app.renderPage();
+  RegSw();
 });
