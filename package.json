@@ -1,7 +1,7 @@
 {
-  "name": "restaurant-apps",
+  "name": "cariresto-apps",
   "version": "1.0.0",
-  "description": "",
+  "description": "Web App For Find Best Restaurant In Indonesia",
   "main": "index.js",
   "scripts": {
     "start-dev": "webpack-dev-server --config webpack.dev.js",
@@ -9,7 +9,7 @@
     "test": "karma start"
   },
   "keywords": [],
-  "author": "your_name <your.email@domain.com>",
+  "author": "come.programmer@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.10.5",
