@@ -103,32 +103,32 @@ main {
           &:focus {
             outline: 3px solid $activeLinkColor !important;
           }
-          button {
-            &.favorite__btn {
-              z-index: 1000;
-              box-shadow: 0px 3px 5px rgba(85, 85, 85, 0.23);
-              display: inline-block;
-              position: absolute;
-              top: 140px;
-              right: 0;
-              margin-right: 0.5rem;
-              background-color: #ffffff;
-              color: #ff4040;
-              font-size: 1.3em;
-              border: 0;
-              border-radius: 50%;
-              width: 55px;
-              height: 55px;
-              cursor: pointer;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              &.favorited__btn {
-                background-color: #ff4040;
-                color: #ffffff;
-              }
-            }
-          }
+          // button {
+          //   &.favorite__btn {
+          //     z-index: 1000;
+          //     box-shadow: 0px 3px 5px rgba(85, 85, 85, 0.23);
+          //     display: inline-block;
+          //     position: absolute;
+          //     top: 140px;
+          //     right: 0;
+          //     margin-right: 0.5rem;
+          //     background-color: #ffffff;
+          //     color: #ff4040;
+          //     font-size: 1.3em;
+          //     border: 0;
+          //     border-radius: 50%;
+          //     width: 55px;
+          //     height: 55px;
+          //     cursor: pointer;
+          //     display: flex;
+          //     align-items: center;
+          //     justify-content: center;
+          //     &.favorited__btn {
+          //       background-color: #ff4040;
+          //       color: #ffffff;
+          //     }
+          //   }
+          // }
           a {
             @include reset__link;
             width: 100%;
@@ -233,32 +233,32 @@ main {
           &:focus {
             outline: 3px solid $activeLinkColor !important;
           }
-          button {
-            &.favorite__btn {
-              z-index: 1000;
-              box-shadow: 0px 3px 5px rgba(85, 85, 85, 0.23);
-              display: inline-block;
-              position: absolute;
-              top: 140px;
-              right: 0;
-              margin-right: 0.5rem;
-              background-color: #ffffff;
-              color: #ff4040;
-              font-size: 1.3em;
-              border: 0;
-              border-radius: 50%;
-              width: 55px;
-              height: 55px;
-              cursor: pointer;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              &.favorited__btn {
-                background-color: #ff4040;
-                color: #ffffff;
-              }
-            }
-          }
+          // button {
+          //   &.favorite__btn {
+          //     z-index: 1000;
+          //     box-shadow: 0px 3px 5px rgba(85, 85, 85, 0.23);
+          //     display: inline-block;
+          //     position: absolute;
+          //     top: 140px;
+          //     right: 0;
+          //     margin-right: 0.5rem;
+          //     background-color: #ffffff;
+          //     color: #ff4040;
+          //     font-size: 1.3em;
+          //     border: 0;
+          //     border-radius: 50%;
+          //     width: 55px;
+          //     height: 55px;
+          //     cursor: pointer;
+          //     display: flex;
+          //     align-items: center;
+          //     justify-content: center;
+          //     &.favorited__btn {
+          //       background-color: #ff4040;
+          //       color: #ffffff;
+          //     }
+          //   }
+          // }
           a {
             @include reset__link;
             width: 100%;

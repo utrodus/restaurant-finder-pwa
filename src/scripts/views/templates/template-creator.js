@@ -2,9 +2,6 @@ import API_ENDPOINT from "../../globals/api-endpoint";
 
 const createRestaurantItemTemplate = (restaurant) => `
         <div class="restaurant__item__wrapper"  aria-label="restaurant item">
-        <button aria-label="add to favorite" id="favoriteButton" class="favorite__btn" >
-                    <i class="lni lni-heart" aria-hidden="true"></i>
-                </button>
         <a href="${`/#/detail/${restaurant.id}`}" tabindex="0">
             <div class="restaurant__item">
                 <img class="thumbnail"
@@ -57,7 +54,7 @@ const createReviewItemTemplate = (review) => `
   review.date == undefined ? "" : review.date
 }</p>
 <p class="review_content" tabindex="0">
-  ${review.review == undefined ? "" : review.review}  
+  ${review.review == undefined ? "" : review.review}
 </p>
 </div>
 `;
@@ -85,7 +82,7 @@ const createRestaurantDetailTemplate = (detail) => `
             <div class="category__wrapper">
             ${detail.categories
               .map((category) => createCategoryItemTemplate(category))
-              .join("")}    
+              .join("")}
             </div>
             <p class="description" tabindex="0">
              ${detail.description}
@@ -108,7 +105,7 @@ const createRestaurantDetailTemplate = (detail) => `
             <ul>
             ${detail.menus.foods
               .map((menu) => createMenuItemTemplate(menu))
-              .join("")}                
+              .join("")}
             </ul>
           </div>
           <div class="menu">
@@ -119,7 +116,7 @@ const createRestaurantDetailTemplate = (detail) => `
             <ul>
             ${detail.menus.drinks
               .map((menu) => createMenuItemTemplate(menu))
-              .join("")} 
+              .join("")}
             </ul>
           </div>
           <div class="rating_overview">
@@ -141,7 +138,7 @@ const createRestaurantDetailTemplate = (detail) => `
             </div>
             ${detail.customerReviews
               .map((review) => createReviewItemTemplate(review))
-              .join("")} 
+              .join("")}
             <div class="review_item">
               <p class="reviewer_name" tabindex="0">Utrodus Said</p>
               <p class="review_date" tabindex="0">13 November 2019</p>
