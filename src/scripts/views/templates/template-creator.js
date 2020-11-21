@@ -66,8 +66,27 @@ const createEmptyFavoritePageTemplate = () => `
 Anda Belum Menambahkan Restaurant Ke Halaman Favorites</p>
 `;
 
+const createFavoriteButtonTemplate = () => `
+  <button
+            aria-label="add to favorite"
+            id="favoriteButton"
+            class="favorite__btn"
+          >
+            <i class="lni lni-heart" aria-hidden="true"></i>
+          </button>
+`;
+
+const createFavoritedButtonTemplate = () => `
+  <button
+            aria-label="remove from favorite this restaurant"
+            id="favoriteButton"
+            class="favorite__btn favorited__btn"
+          >
+            <i class="lni lni-heart" aria-hidden="true"></i>
+          </button>
+`;
+
 const createRestaurantDetailTemplate = (detail) => `
-        <section class="container">
           <section class="main__content">
           <div class="restaurant_img">
           <img
@@ -89,13 +108,7 @@ const createRestaurantDetailTemplate = (detail) => `
             </p>
           </div>
           </section>
-           <button
-            aria-label="add to favorite"
-            id="favoriteButton"
-            class="favorite__btn"
-          >
-            <i class="lni lni-heart" aria-hidden="true"></i>
-          </button>
+
           <section class="secondary_content">
           <div class="menu">
             <div class="detail__subtitle">
@@ -167,7 +180,12 @@ const createRestaurantDetailTemplate = (detail) => `
               <button class="review_btn" tabindex="0">Add Review</button>
            </form>
         </section>
-        </section>
 `;
 
-export { createRestaurantItemTemplate, createRestaurantDetailTemplate, createEmptyFavoritePageTemplate };
+export {
+  createRestaurantItemTemplate,
+  createRestaurantDetailTemplate,
+  createEmptyFavoritePageTemplate,
+  createFavoriteButtonTemplate,
+  createFavoritedButtonTemplate,
+};
