@@ -1,5 +1,5 @@
 import UrlParser from "../../routes/url-parser";
-import RestaurantsDbSource from "../../data/restaurantsdb-source";
+import RestaurantsDbSource from "../../data/restaurants-source";
 import { createRestaurantDetailTemplate } from "../../views/templates/template-creator";
 
 const Detail = {

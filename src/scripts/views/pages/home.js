@@ -1,4 +1,4 @@
-import RestaurantsDbSource from "../../data/restaurantsdb-source";
+import RestaurantsDbSource from "../../data/restaurants-source";
 import {createRestaurantItemTemplate} from "../templates/template-creator";
 
 const Home = {
