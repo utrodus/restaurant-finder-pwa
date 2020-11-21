@@ -1,4 +1,5 @@
-import RestaurantsDbSource from "../../data/restaurants-source";
+import FavoriteRestoIdb from "../../data/restaurants-idb-source";
+
 import {
   createRestaurantItemTemplate,
   createEmptyFavoritePageTemplate,
@@ -22,22 +23,22 @@ const Favorites = {
   },
 
   async afterRender() {
-    const restaurants = await RestaurantsDbSource.restaurantsList();
+    const restaurants = await FavoriteRestoIdb.getAllRestaurants();
     const restaurantListContainer = document.getElementById(
       "restaurants__list"
     );
 
-    const favoritesPageContainer = document.getElementById(
-      "favoritesContainer"
-    );
+    restaurants.forEach((restaurant) => {
+      restaurantListContainer.innerHTML += createRestaurantItemTemplate(
+        restaurant
+      );
+    });
 
-    favoritesPageContainer.innerHTML += createEmptyFavoritePageTemplate();
+    // const favoritesPageContainer = document.getElementById(
+    //   "favoritesContainer"
+    // );
 
-    // restaurants.forEach((restaurant) => {
-    //   restaurantListContainer.innerHTML += createRestaurantItemTemplate(
-    //     restaurant
-    //   );
-    // });
+    // favoritesPageContainer.innerHTML += createEmptyFavoritePageTemplate();
   },
 };
 
