@@ -1,7 +1,8 @@
-import UrlParser from "../../routes/url-parser";
-import RestaurantsDbSource from "../../data/restaurants-source";
-import { createRestaurantDetailTemplate } from "../../views/templates/template-creator";
-import FavButtonInitiator from "../../utils/fav-btn-initiator";
+import UrlParser from '../../routes/url-parser';
+import RestaurantsDbSource from '../../data/restaurants-source';
+import { createRestaurantDetailTemplate } from '../templates/template-creator';
+import FavButtonInitiator from '../../utils/fav-btn-initiator';
+
 const Detail = {
   async render() {
     return `
@@ -14,20 +15,19 @@ const Detail = {
   },
 
   async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const detailRestaurant = await RestaurantsDbSource.detailRestaurants(
-      url.id
+      url.id,
     );
 
-    const detailPageContainer = document.querySelector("#detailContent");
+    const detailPageContainer = document.querySelector('#detailContent');
 
     detailPageContainer.innerHTML = createRestaurantDetailTemplate(
-      detailRestaurant
+      detailRestaurant,
     );
 
     await FavButtonInitiator.init({
-      favButtonContainer: document.querySelector("#favoriteButtonContainer"),
+      favButtonContainer: document.querySelector('#favoriteButtonContainer'),
       restaurant: detailRestaurant,
     });
   },

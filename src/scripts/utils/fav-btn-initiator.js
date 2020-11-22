@@ -1,8 +1,8 @@
 import {
   createFavoriteButtonTemplate,
   createFavoritedButtonTemplate,
-} from "../views/templates/template-creator";
-import FavoriteRestoIdb from "../data/restaurants-idb-source";
+} from '../views/templates/template-creator';
+import FavoriteRestoIdb from '../data/restaurants-idb-source';
 
 const FavButtonInitiator = {
   async init({ favButtonContainer, restaurant }) {
@@ -25,9 +25,9 @@ const FavButtonInitiator = {
 
   _renderLike() {
     this._favButtonContainer.innerHTML = createFavoriteButtonTemplate();
-    const favoriteButton = document.querySelector("#favoriteButton");
+    const favoriteButton = document.querySelector('#favoriteButton');
 
-    favoriteButton.addEventListener("click", async () => {
+    favoriteButton.addEventListener('click', async () => {
       await FavoriteRestoIdb.putRestaurant(this._restaurant);
       this._renderButton();
     });
@@ -35,8 +35,8 @@ const FavButtonInitiator = {
 
   _renderLiked() {
     this._favButtonContainer.innerHTML = createFavoritedButtonTemplate();
-    const favoriteButton = document.querySelector("#favoriteButton");
-    favoriteButton.addEventListener("click", async () => {
+    const favoriteButton = document.querySelector('#favoriteButton');
+    favoriteButton.addEventListener('click', async () => {
       await FavoriteRestoIdb.deleteRestaurant(this._restaurant.id);
       this._renderButton();
     });

@@ -1,4 +1,4 @@
-import API_ENDPOINT from "../globals/api-endpoint";
+import API_ENDPOINT from '../globals/api-endpoint';
 
 class RestaurantsDbSource {
   static async restaurantsList() {
@@ -13,8 +13,8 @@ class RestaurantsDbSource {
     return responseJson.restaurant;
   }
 
-  static async detailPicture(id,option) {
-    const response = await fetch(API_ENDPOINT.PICTURE(id,option));
+  static async detailPicture(id, option) {
+    const response = await fetch(API_ENDPOINT.PICTURE(id, option));
     return response.json();
   }
 }

@@ -1,5 +1,5 @@
-import RestaurantsDbSource from "../../data/restaurants-source";
-import {createRestaurantItemTemplate} from "../templates/template-creator";
+import RestaurantsDbSource from '../../data/restaurants-source';
+import { createRestaurantItemTemplate } from '../templates/template-creator';
 
 const Home = {
   async render() {
@@ -46,14 +46,13 @@ const Home = {
   },
 
   async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
     const restaurants = await RestaurantsDbSource.restaurantsList();
     const restaurantListContainer = document.getElementById(
-      "restaurants__list"
+      'restaurants__list',
     );
     restaurants.forEach((restaurant) => {
       restaurantListContainer.innerHTML += createRestaurantItemTemplate(
-        restaurant
+        restaurant,
       );
     });
   },
