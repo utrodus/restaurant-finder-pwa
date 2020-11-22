@@ -10,7 +10,7 @@ class App {
     this._button = button;
     this._drawer = drawer;
     this._content = content;
-    this._appmenu = appmenu;
+    this._Appmenu = appmenu;
     this._activeMenu = activeMenu;
     this._initialAppShell();
   }
@@ -22,7 +22,7 @@ class App {
       content: this._content,
     });
     UrlActiveChecker.init({
-      menus: this._appmenu,
+      menus: this._Appmenu,
       activeMenu: this._activeMenu,
     });
   }
