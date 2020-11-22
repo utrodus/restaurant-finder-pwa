@@ -37,7 +37,7 @@ const FavButtonInitiator = {
     this._favButtonContainer.innerHTML = createFavoritedButtonTemplate();
     const favoriteButton = document.querySelector("#favoriteButton");
     favoriteButton.addEventListener("click", async () => {
-      await FavoriteRestoIdb.deleteMovie(this._restaurant.id);
+      await FavoriteRestoIdb.deleteRestaurant(this._restaurant.id);
       this._renderButton();
     });
   },
