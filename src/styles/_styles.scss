@@ -195,15 +195,17 @@ main {
 
       .restaurants__list {
         padding: 0 2rem;
-        a {
+         a {
           @include reset__link;
           width: 100%;
-          overflow: hidden;
+          height: 100%;
           &:focus {
             outline: 3px solid $activeLinkColor !important;
           }
           .restaurant__item {
-
+            margin: 2rem 0;
+            overflow: hidden;
+             @include card-style;
             .thumbnail {
               height: 11rem;
               max-height: 11rem;
