@@ -23,22 +23,22 @@ const Favorites = {
   },
 
   async afterRender() {
+    const favoritesPageContainer = document.getElementById(
+      "favoritesContainer"
+    );
     const restaurants = await FavoriteRestoIdb.getAllRestaurants();
     const restaurantListContainer = document.getElementById(
       "restaurants__list"
     );
+    if (restaurants === undefined || restaurants.length == 0) {
+      favoritesPageContainer.innerHTML += createEmptyFavoritePageTemplate();
+    }
 
     restaurants.forEach((restaurant) => {
       restaurantListContainer.innerHTML += createRestaurantItemTemplate(
         restaurant
       );
     });
-
-    // const favoritesPageContainer = document.getElementById(
-    //   "favoritesContainer"
-    // );
-
-    // favoritesPageContainer.innerHTML += createEmptyFavoritePageTemplate();
   },
 };
 

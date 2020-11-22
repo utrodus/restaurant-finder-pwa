@@ -61,9 +61,11 @@ const createReviewItemTemplate = (review) => `
 
 const createEmptyFavoritePageTemplate = () => `
 <p class="empty__favorite">
+
+Anda Belum Menambahkan Restaurant Ke Halaman Favorites
 <i class="lni lni-heart" aria-hidden="true"></i>
 
-Anda Belum Menambahkan Restaurant Ke Halaman Favorites</p>
+</p>
 `;
 
 const createFavoriteButtonTemplate = () => `
