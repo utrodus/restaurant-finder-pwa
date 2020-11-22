@@ -2,21 +2,26 @@
   .container {
     padding: 2.5rem 4rem !important;
   }
+
   header {
     padding: 0.2rem 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
+
     .app__bar {
       padding: 1rem;
       flex-basis: 30%;
       flex-wrap: wrap;
+
       #menu__button {
         display: none;
       }
+
       .logo {
         margin: 0;
+
         img {
           margin-left: 1.5rem;
           width: 6.188rem;
@@ -29,11 +34,13 @@
       flex-basis: 70%;
       transform: translate(0, 0);
       position: static;
+
       ul {
         display: flex;
         justify-content: flex-end;
         list-style-type: none;
         margin-top: 0;
+
         li {
           a {
             display: inline-block;
@@ -42,6 +49,7 @@
             text-decoration: none;
             font-size: 1em;
             color: white;
+
             &.active {
               color: $activeLinkColor;
             }
@@ -50,17 +58,20 @@
       }
     }
   }
+
   .jumbotron {
     .jumbotron__content {
       padding: 4.5rem 0 3rem 0;
       color: $white;
       text-align: center;
+
       h1 {
         padding: 1.5rem 2.5rem 0.5rem 2.5rem;
         font-weight: bold;
         font-size: 2.7em;
         margin-bottom: 1.5rem;
       }
+
       h2 {
         padding: 0px 6.5rem;
         line-height: 35px;
@@ -74,10 +85,12 @@
     .content {
       .featured {
         padding: 0 0 3rem 0;
+
         .featured__img {
           margin: 4rem 0 1rem 0;
           padding: 2.5rem 3rem;
         }
+
         .featured__content {
           h1 {
             font-size: 2.3em;
@@ -85,6 +98,7 @@
             font-weight: bold;
             line-height: 48px;
           }
+
           p {
             font-size: 1.3em;
             color: $lightBlack;
@@ -94,15 +108,18 @@
           }
         }
       }
+
       .restaurants {
         padding: 2.3rem 0 5rem 0;
         background-color: $bodyContentColor;
+
         h1 {
           font-size: 2.3em;
           color: $black;
           font-weight: bold;
           line-height: 48px;
         }
+
         p {
           font-size: 1.3em;
           color: $lightBlack;
@@ -110,24 +127,25 @@
           font-weight: 300;
           line-height: 32px;
         }
+
         a {
           @include reset__link;
         }
+
         .restaurants__list {
           display: grid;
           grid-template-columns: 1fr 1fr;
           grid-column-gap: 1.5em;
           grid-row-gap: 2.5rem;
           padding: 0 4rem;
-          .restaurant__item__wrapper {
-            margin: 0;
-            a {
-              .restaurant__item {
-                margin: 0;
-                .content {
-                  position: relative;
-                  padding: 15px 20px 10px 20px;
-                }
+
+          a {
+            .restaurant__item {
+              margin: 0;
+
+              .content {
+                position: relative;
+                padding: 15px 20px 10px 20px;
               }
             }
           }
@@ -136,24 +154,30 @@
     }
   }
 }
+
 @media screen and (min-width: 900px) {
   .container {
     padding: 4rem 2.8rem !important;
   }
+
   header {
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
     padding: 0.2rem 4rem;
+
     .app__bar {
       flex-basis: 30%;
       flex-wrap: wrap;
+
       #menu__button {
         display: none;
       }
+
       .logo {
         margin: 0;
+
         img {
           width: 6.188rem;
         }
@@ -166,11 +190,13 @@
       transform: translate(0, 0);
       position: static;
       padding: 0 1.5rem;
+
       ul {
         display: flex;
         justify-content: flex-end;
         list-style-type: none;
         margin-top: 0;
+
         li {
           a {
             display: inline-block;
@@ -179,6 +205,7 @@
             text-decoration: none;
             font-size: 1em;
             color: white;
+
             &.active {
               color: $activeLinkColor;
             }
@@ -187,14 +214,17 @@
       }
     }
   }
+
   .jumbotron {
     .jumbotron__content {
       padding: 5.5rem 0 3rem 0;
+
       h1 {
         padding: 1.5rem 2.5rem 0.5rem 2.5rem;
         font-size: 2.5em;
         margin-bottom: 1.5rem;
       }
+
       h2 {
         font-size: 1.4em;
       }
@@ -207,30 +237,37 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         padding: 0 0 3rem 0;
+
         .featured__img {
           margin: 4rem 0 1rem 0;
           padding: 0 2rem;
         }
+
         .featured__content {
           margin: 4rem 0 1rem 0;
+
           h1 {
             margin-top: 1em;
             font-size: 2em;
           }
+
           p {
             font-size: 1.1em;
           }
         }
       }
+
       .restaurants {
         padding: 2.3rem 0 5rem 0;
         background-color: $bodyContentColor;
+
         h1 {
           font-size: 2.3em;
           color: $black;
           font-weight: bold;
           line-height: 48px;
         }
+
         p {
           font-size: 1.3em;
           color: $lightBlack;
@@ -238,37 +275,39 @@
           font-weight: 300;
           line-height: 32px;
         }
+
         a {
           @include reset__link;
         }
+
         .restaurants__list {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           grid-column-gap: 1.5em;
           grid-row-gap: 2rem;
           padding: 0 2.8rem;
-          .restaurant__item__wrapper {
-            margin: 0;
-            a {
-              .restaurant__item {
-                margin: 0;
-                .content {
-                  position: relative;
-                  padding: 15px 20px 10px 20px;
-                }
+          a {
+            .restaurant__item {
+              margin: 0;
+              .content {
+                position: relative;
+                padding: 15px 20px 10px 20px;
               }
             }
           }
         }
       }
+
       .favorites_restaurant {
         padding: 2.3rem 0 5rem 0;
+
         h1 {
           font-size: 2.3em;
           color: $black;
           font-weight: bold;
           line-height: 48px;
         }
+
         p {
           font-size: 1.3em;
           color: $lightBlack;
@@ -276,30 +315,30 @@
           font-weight: 300;
           line-height: 32px;
         }
+
         a {
           @include reset__link;
         }
+
         .restaurants__list {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           grid-column-gap: 1.5em;
           grid-row-gap: 2rem;
           padding: 0 2.8rem;
-          .restaurant__item__wrapper {
-            margin: 0;
-            a {
-              .restaurant__item {
-                margin: 0;
-                .content {
-                  position: relative;
-                  padding: 15px 20px 10px 20px;
-                }
+          a {
+            .restaurant__item {
+              margin: 0;
+              .content {
+                position: relative;
+                padding: 15px 20px 10px 20px;
               }
             }
           }
         }
       }
     }
+
     article.detail {
       .restaurant__title {
         margin-top: 0;
@@ -326,42 +365,54 @@
         font-size: 1.6em;
         margin: 1.9rem 0 1rem;
       }
+
       .category__wrapper {
         display: flex;
+
         .category {
           margin-right: 1rem;
           padding: 0.5rem 1.5rem;
         }
       }
+
       p.description {
         margin: 1rem 0;
       }
+
       .detail__subtitle {
         margin-top: 3rem;
+
         p {
           font-size: 1.2em;
         }
+
         hr.separator {
           margin: 1rem 0 !important;
         }
       }
+
       .secondary_content {
         max-width: 1000px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+
         .menu {
           margin-top: 0;
+
           ul {
             margin-left: 0.8rem;
           }
         }
       }
+
       .customer__reviews {
         max-width: 60%;
+
         .review_item {
           @include card-style;
           margin: 1rem 0;
           padding: 1rem;
+
           p {
             &.reviewer_name {
               font-family: $WorkSans;
@@ -370,6 +421,7 @@
               font-size: 1em;
               color: $black;
             }
+
             &.review_date {
               font-family: $WorkSans;
               font-style: normal;
@@ -378,6 +430,7 @@
               line-height: 32px;
               color: #eb9125;
             }
+
             &.review_content {
               font-family: $DMSans;
               font-style: normal;
@@ -389,12 +442,14 @@
           }
         }
       }
+
       .review_form {
         margin-top: 2rem;
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+
         .input_name,
         .input_description {
           width: 100%;
@@ -410,6 +465,7 @@
         input {
           margin-bottom: 0.5rem;
         }
+
         textarea {
           padding: 0.5rem 1rem;
         }
@@ -431,10 +487,12 @@
             cursor: pointer;
             border: none;
             border-radius: 7px;
+
             &:hover {
               background-color: #c5952d;
               color: white;
             }
+
             &:focus {
               background-color: #ce9928;
               color: white;
@@ -451,12 +509,14 @@
     max-width: 1200px;
     margin: 0 auto;
   }
+
   main {
     .content {
       .featured {
         margin: 0 auto;
         max-width: 1200px;
       }
+
       .restaurants {
         .restaurants__list {
           margin: 0 auto;
@@ -464,6 +524,7 @@
           grid-template-columns: repeat(4, 1fr);
         }
       }
+
       .favorites_restaurant {
         .restaurants__list {
           margin: 0 auto;

@@ -99,13 +99,15 @@ main {
         padding: 0 2rem;
         a {
           @include reset__link;
-          @include card-style;
           width: 100%;
-          overflow: hidden;
+          height: 100%;
           &:focus {
             outline: 3px solid $activeLinkColor !important;
           }
           .restaurant__item {
+            margin: 2rem 0;
+            overflow: hidden;
+             @include card-style;
             .thumbnail {
               height: 11rem;
               max-height: 11rem;
@@ -195,13 +197,13 @@ main {
         padding: 0 2rem;
         a {
           @include reset__link;
-          @include card-style;
           width: 100%;
           overflow: hidden;
           &:focus {
             outline: 3px solid $activeLinkColor !important;
           }
           .restaurant__item {
+
             .thumbnail {
               height: 11rem;
               max-height: 11rem;
