@@ -12,5 +12,13 @@
         "sourceType": "module"
     },
     "rules": {
+        "no-console": "off",
+        "linebreak-style": "off",
+        "no-undef": "off",
+        "no-underscore-dangle": "off",
+        "operator-linebreak": "off",
+        "implicit-arrow-linebreak": "off",
+        "consistent-return": "off",
+        "no-prototype-builtins": "off"
     }
 }

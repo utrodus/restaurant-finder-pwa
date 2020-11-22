@@ -1,10 +1,10 @@
 class AppHeader extends HTMLElement {
-    connectedCallback() {
-      this.render();
-    }
-  
-    render() {
-      this.innerHTML = `
+  connectedCallback() {
+    this.render();
+  }
+
+  render() {
+    this.innerHTML = `
       <header>
       <div class="header__content">
         <div class="app__bar">
@@ -30,8 +30,7 @@ class AppHeader extends HTMLElement {
       </div>
     </header>
       `;
-    }
   }
-  
-  customElements.define('app-header', AppHeader);
-  
+}
+
+customElements.define('app-header', AppHeader);

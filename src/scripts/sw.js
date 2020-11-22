@@ -21,33 +21,31 @@ precacheAndRoute(
     ...self.__WB_MANIFEST,
     {
       url:
-        "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Work+Sans:wght@400;500;600;700&display=swap",
+        'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Work+Sans:wght@400;500;600;700&display=swap',
       revision: 1,
     },
     {
-      url: "https://cdn.lineicons.com/2.0/LineIcons.css",
+      url: 'https://cdn.lineicons.com/2.0/LineIcons.css',
       revision: 1,
     },
   ],
   {
     ignoreURLParametersMatching: [/.*/],
-  }
+  },
 );
 
-
 registerRoute(
-  new RegExp("https://restaurant-api.dicoding.dev/"),
+  new RegExp('https://restaurant-api.dicoding.dev/'),
   new StaleWhileRevalidate({
-    cacheName: "cache-api",
+    cacheName: 'cache-api',
     plugins: [
       new ExpirationPlugin({
         maxEntries: 50,
         maxAgeSeconds: 60 * 60 * 24 * 30 * 2,
       }),
     ],
-  })
+  }),
 );
-
 
 registerRoute(
   ({ request }) => request.destination === 'image',
