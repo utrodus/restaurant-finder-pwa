@@ -46,7 +46,16 @@ registerRoute(
     ],
   }),
 );
+registerRoute(
+  new RegExp('https://cdn.lineicons.com/'),
+  new StaleWhileRevalidate({
+    cacheName: 'cache-lineicons',
+  }),
+);
 
+registerRoute(new RegExp('https://fonts.gstatic.com/'), new StaleWhileRevalidate({
+  cacheName: 'cache-googlefont',
+}));
 registerRoute(
   ({ request }) => request.destination === 'image',
   new CacheFirst({
