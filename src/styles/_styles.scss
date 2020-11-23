@@ -449,6 +449,7 @@ main {
         &.review_btn {
           margin: 1.5rem 0;
           width: 100%;
+          min-height: 45px;
           @include reset__link;
           display: inline-block;
           padding: 0.5rem 3.7rem;
