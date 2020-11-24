@@ -57,6 +57,7 @@ hr {
 main {
   width: 100%;
   margin: 0 auto;
+
   .content {
     .featured {
       .featured__img {
@@ -107,7 +108,7 @@ main {
           .restaurant__item {
             margin: 2rem 0;
             overflow: hidden;
-             @include card-style;
+            @include card-style;
             .thumbnail {
               height: 11rem;
               max-height: 11rem;
@@ -195,7 +196,7 @@ main {
 
       .restaurants__list {
         padding: 0 2rem;
-         a {
+        a {
           @include reset__link;
           width: 100%;
           height: 100%;
@@ -205,7 +206,7 @@ main {
           .restaurant__item {
             margin: 2rem 0;
             overflow: hidden;
-             @include card-style;
+            @include card-style;
             .thumbnail {
               height: 11rem;
               max-height: 11rem;
@@ -271,6 +272,7 @@ main {
       }
     }
   }
+
   article.detail {
     margin-top: 1.5rem;
     .restaurant__title {
@@ -473,6 +475,20 @@ main {
           }
         }
       }
+    }
+  }
+  #errMessageContainer {
+    margin-top: 1rem;
+    padding: 1rem 0;
+    i.lni-emoji-sad {
+      font-size: 3rem;
+      color: #808080;
+      margin-bottom: 1.3rem;
+    }
+    p.err__message {
+      font-size: 1.2em;
+      color: #808080;
+      font-weight: 500;
     }
   }
 }

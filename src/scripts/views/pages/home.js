@@ -1,5 +1,5 @@
 import RestaurantsDbSource from '../../data/restaurants-source';
-import { createRestaurantItemTemplate } from '../templates/template-creator';
+import { createRestaurantItemTemplate, createErrorMessageTemplate } from '../templates/template-creator';
 
 const Home = {
   async render() {
@@ -31,7 +31,7 @@ const Home = {
           </div>
         </article>
         <article id="restaurants" class="restaurants">
-          <div class="container">
+          <div class="container" id="container">
             <h1 tabindex="0">Restaurants</h1>
             <hr class="separator" />
             <p tabindex="0">
@@ -46,15 +46,25 @@ const Home = {
   },
 
   async afterRender() {
-    const restaurants = await RestaurantsDbSource.restaurantsList();
+    console.log('coba');
+    let restaurants = [];
     const restaurantListContainer = document.getElementById(
       'restaurants__list',
     );
-    restaurants.forEach((restaurant) => {
-      restaurantListContainer.innerHTML += createRestaurantItemTemplate(
-        restaurant,
-      );
-    });
+    const container = document.getElementById(
+      'container',
+    );
+    try {
+      restaurants = await RestaurantsDbSource.restaurantsList();
+      restaurants.forEach((restaurant) => {
+        restaurantListContainer.innerHTML += createRestaurantItemTemplate(
+          restaurant,
+        );
+      });
+    } catch (err) {
+      console.log(err);
+      container.innerHTML += createErrorMessageTemplate('Gagal Memuat Restaurant, Mohon Periksa Koneksi Internet Anda');
+    }
   },
 };
 

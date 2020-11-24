@@ -1,6 +1,6 @@
 import UrlParser from '../../routes/url-parser';
 import RestaurantsDbSource from '../../data/restaurants-source';
-import { createRestaurantDetailTemplate } from '../templates/template-creator';
+import { createRestaurantDetailTemplate, createErrorMessageTemplate } from '../templates/template-creator';
 import FavButtonInitiator from '../../utils/fav-btn-initiator';
 
 const Detail = {
@@ -16,20 +16,23 @@ const Detail = {
 
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
-    const detailRestaurant = await RestaurantsDbSource.detailRestaurants(
-      url.id,
-    );
-
     const detailPageContainer = document.querySelector('#detailContent');
+    let detailRestaurant = {};
 
-    detailPageContainer.innerHTML = createRestaurantDetailTemplate(
-      detailRestaurant,
-    );
-
-    await FavButtonInitiator.init({
-      favButtonContainer: document.querySelector('#favoriteButtonContainer'),
-      restaurant: detailRestaurant,
-    });
+    try {
+      detailRestaurant = await RestaurantsDbSource.detailRestaurants(
+        url.id,
+      );
+      detailPageContainer.innerHTML = createRestaurantDetailTemplate(
+        detailRestaurant,
+      );
+      await FavButtonInitiator.init({
+        favButtonContainer: document.querySelector('#favoriteButtonContainer'),
+        restaurant: detailRestaurant,
+      });
+    } catch (error) {
+      detailPageContainer.innerHTML += createErrorMessageTemplate('Gagal Memuat Detail Restaurant, Mohon Periksa Koneksi Internet Anda');
+    }
   },
 };
 

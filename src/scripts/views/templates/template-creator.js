@@ -7,25 +7,21 @@ const createRestaurantItemTemplate = (restaurant) => `
                     src="${API_ENDPOINT.PICTURE(restaurant.pictureId, 'small')}"
                     alt="${restaurant.name}">
                 <div class="content">
-                    <h1 class="title" tabindex="0" aria-label="Nama Restaurant ${
-  restaurant.name
+                    <h1 class="title" tabindex="0" aria-label="Nama Restaurant ${restaurant.name
 }" >${restaurant.name}
                     </h1>
-                    <p class="description" tabindex="0" aria-label="Tentang Restaurant ${
-  restaurant.description
+                    <p class="description" tabindex="0" aria-label="Tentang Restaurant ${restaurant.description
 }" >${restaurant.description}</p>
                     <div class="restaurant__address">
                     <div class="marker">
                         <i class="lni lni-map-marker " aria-hidden="true"></i>
                         </div>
-                        <p class="address" tabindex="0" aria-label="Kota ${
-  restaurant.city
+                        <p class="address" tabindex="0" aria-label="Kota ${restaurant.city
 }">${restaurant.city}</p>
                     </div>
                     <div class="restaurant__rating">
                         <i class="lni lni-star-filled star" aria-hidden="true"></i>
-                        <p class="address" tabindex="0" aria-label="Rating Restaurant ${
-  restaurant.rating
+                        <p class="address" tabindex="0" aria-label="Rating Restaurant ${restaurant.rating
 }">
                         ${restaurant.rating}
                         </p>
@@ -45,11 +41,9 @@ const createMenuItemTemplate = (menu) => `
 
 const createReviewItemTemplate = (review) => `
 <div class="review_item" tabindex="0" >
-<p class="reviewer_name" tabindex="0">${
-  review.name === undefined ? '' : review.name
+<p class="reviewer_name" tabindex="0">${review.name === undefined ? '' : review.name
 }</p>
-<p class="review_date" tabindex="0">${
-  review.date === undefined ? '' : review.date
+<p class="review_date" tabindex="0">${review.date === undefined ? '' : review.date
 }</p>
 <p class="review_content" tabindex="0">
   ${review.review === undefined ? '' : review.review}
@@ -59,11 +53,16 @@ const createReviewItemTemplate = (review) => `
 
 const createEmptyFavoritePageTemplate = () => `
 <p class="empty__favorite">
-
 Anda Belum Menambahkan Restaurant Ke Halaman Favorites
 <i class="lni lni-heart" aria-hidden="true"></i>
-
 </p>
+`;
+
+const createErrorMessageTemplate = (err) => `
+<div id="errMessageContainer">
+            <i class="lni lni-emoji-sad" aria-hidden="true" class="err__icon"></i>
+            <p class="err__message">${err}</p>
+            </div>
 `;
 
 const createFavoriteButtonTemplate = () => `
@@ -188,4 +187,5 @@ export {
   createEmptyFavoritePageTemplate,
   createFavoriteButtonTemplate,
   createFavoritedButtonTemplate,
+  createErrorMessageTemplate,
 };
