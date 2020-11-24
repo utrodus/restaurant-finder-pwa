@@ -29,7 +29,7 @@ const FavButtonInitiator = {
 
     favoriteButton.addEventListener('click', async () => {
       await FavoriteRestoIdb.putRestaurant(this._restaurant);
-      this._renderButton();
+      await this._renderButton();
     });
   },
 
@@ -38,7 +38,7 @@ const FavButtonInitiator = {
     const favoriteButton = document.querySelector('#favoriteButton');
     favoriteButton.addEventListener('click', async () => {
       await FavoriteRestoIdb.deleteRestaurant(this._restaurant.id);
-      this._renderButton();
+      await this._renderButton();
     });
   },
 };
