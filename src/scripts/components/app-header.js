@@ -21,6 +21,7 @@ class AppHeader extends HTMLElement {
               <a
                 href="https://www.linkedin.com/in/utrodus-said/"
                 target="_blank"
+                rel="noopener"
                 tabindex="0"
                 >About Us</a
               >
