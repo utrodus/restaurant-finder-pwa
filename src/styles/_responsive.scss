@@ -132,6 +132,13 @@
           @include reset__link;
         }
 
+        #loading_indicator {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-column-gap: 1.5em;
+          grid-row-gap: 2.5rem;
+          padding: 0 4rem;
+        }
         .restaurants__list {
           display: grid;
           grid-template-columns: 1fr 1fr;
@@ -280,6 +287,13 @@
           @include reset__link;
         }
 
+        #loading_indicator {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-column-gap: 1.5em;
+          grid-row-gap: 2rem;
+          padding: 0 2.8rem;
+        }
         .restaurants__list {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
@@ -320,6 +334,13 @@
           @include reset__link;
         }
 
+        #loading_indicator {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-column-gap: 1.5em;
+          grid-row-gap: 2rem;
+          padding: 0 2.8rem;
+        }
         .restaurants__list {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
@@ -519,6 +540,11 @@
       }
 
       .restaurants {
+        #loading_indicator {
+          margin: 0 auto;
+          max-width: 1200px;
+          grid-template-columns: repeat(4, 1fr);
+        }
         .restaurants__list {
           margin: 0 auto;
           max-width: 1200px;

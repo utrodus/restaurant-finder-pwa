@@ -1,7 +1,7 @@
 import RestaurantsDbSource from "../../data/restaurants-source";
-import  createRestaurantItemTemplate from "../templates/restaurant-item-template";
+import createRestaurantItemTemplate from "../templates/restaurant-item-template";
 import { createErrorMessageTemplate } from "../templates/message-template";
-
+import RestaurantItemSkeleton from "../templates/skeleton-ui-template";
 const Home = {
   async render() {
     return `
@@ -40,26 +40,33 @@ const Home = {
               keluarga, teman atau yang tersayang
             </p>
           </div>
-          <div id="restaurants__list" class="restaurants__list"></div>
+          <div id="loading_indicator"></div>
+          <div id="restaurants__list" class="restaurants__list">
+          </div>
         </article>
       </section>
     `;
   },
 
   async afterRender() {
-    console.log("coba");
-    let restaurants = [];
     const restaurantListContainer = document.getElementById(
       "restaurants__list"
     );
+    const loadingIndicator = document.getElementById("loading_indicator");
     const container = document.getElementById("container");
+    for (let i = 0; i < 8; i++) {
+      loadingIndicator.innerHTML += RestaurantItemSkeleton();
+    }
+    restaurantListContainer.style.display = "none";
     try {
-      restaurants = await RestaurantsDbSource.restaurantsList();
+      const restaurants = await RestaurantsDbSource.restaurantsList();
       restaurants.forEach((restaurant) => {
         restaurantListContainer.innerHTML += createRestaurantItemTemplate(
           restaurant
         );
       });
+      restaurantListContainer.style.display = "grid";
+      loadingIndicator.style.display = "none";
     } catch (err) {
       console.log(err);
       container.innerHTML += createErrorMessageTemplate(
