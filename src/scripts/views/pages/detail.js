@@ -1,8 +1,8 @@
-import UrlParser from "../../routes/url-parser";
-import RestaurantsDbSource from "../../data/restaurants-source";
-import createRestaurantDetailTemplate from "../templates/detail-restaurant-template";
-import { createErrorMessageTemplate } from "../templates/message-template";
-import FavButtonInitiator from "../../utils/fav-btn-initiator";
+import UrlParser from '../../routes/url-parser';
+import RestaurantsDbSource from '../../data/restaurants-source';
+import createRestaurantDetailTemplate from '../templates/detail-restaurant-template';
+import { createErrorMessageTemplate } from '../templates/message-template';
+import FavButtonInitiator from '../../utils/fav-btn-initiator';
 
 const Detail = {
   async render() {
@@ -17,21 +17,21 @@ const Detail = {
 
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
-    const detailPageContainer = document.querySelector("#detailContent");
+    const detailPageContainer = document.querySelector('#detailContent');
     let detailRestaurant = {};
 
     try {
       detailRestaurant = await RestaurantsDbSource.detailRestaurants(url.id);
       detailPageContainer.innerHTML = createRestaurantDetailTemplate(
-        detailRestaurant
+        detailRestaurant,
       );
       await FavButtonInitiator.init({
-        favButtonContainer: document.querySelector("#favoriteButtonContainer"),
+        favButtonContainer: document.querySelector('#favoriteButtonContainer'),
         restaurant: detailRestaurant,
       });
     } catch (error) {
       detailPageContainer.innerHTML += createErrorMessageTemplate(
-        "Gagal Memuat Detail Restaurant, Mohon Periksa Koneksi Internet Anda"
+        'Gagal Memuat Detail Restaurant, Mohon Periksa Koneksi Internet Anda',
       );
     }
   },

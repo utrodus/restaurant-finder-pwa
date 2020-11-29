@@ -1,7 +1,9 @@
-import RestaurantsDbSource from "../../data/restaurants-source";
-import createRestaurantItemTemplate from "../templates/restaurant-item-template";
-import { createErrorMessageTemplate } from "../templates/message-template";
-import RestaurantItemSkeleton from "../templates/skeleton-ui-template";
+/* eslint-disable no-plusplus */
+import RestaurantsDbSource from '../../data/restaurants-source';
+import createRestaurantItemTemplate from '../templates/restaurant-item-template';
+import { createErrorMessageTemplate } from '../templates/message-template';
+import RestaurantItemSkeleton from '../templates/skeleton-ui-template';
+
 const Home = {
   async render() {
     return `
@@ -50,27 +52,27 @@ const Home = {
 
   async afterRender() {
     const restaurantListContainer = document.getElementById(
-      "restaurants__list"
+      'restaurants__list',
     );
-    const loadingIndicator = document.getElementById("loading_indicator");
-    const container = document.getElementById("container");
+    const loadingIndicator = document.getElementById('loading_indicator');
+    const container = document.getElementById('container');
     for (let i = 0; i < 8; i++) {
       loadingIndicator.innerHTML += RestaurantItemSkeleton();
     }
-    restaurantListContainer.style.display = "none";
+    restaurantListContainer.style.display = 'none';
     try {
       const restaurants = await RestaurantsDbSource.restaurantsList();
       restaurants.forEach((restaurant) => {
         restaurantListContainer.innerHTML += createRestaurantItemTemplate(
-          restaurant
+          restaurant,
         );
       });
-      restaurantListContainer.style.display = "grid";
-      loadingIndicator.style.display = "none";
+      restaurantListContainer.style.display = 'grid';
+      loadingIndicator.style.display = 'none';
     } catch (err) {
       console.log(err);
       container.innerHTML += createErrorMessageTemplate(
-        "Gagal Memuat Restaurant, Mohon Periksa Koneksi Internet Anda"
+        'Gagal Memuat Restaurant, Mohon Periksa Koneksi Internet Anda',
       );
     }
   },
