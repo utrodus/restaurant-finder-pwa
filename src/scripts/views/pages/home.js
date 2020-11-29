@@ -54,10 +54,10 @@ const Home = {
     const restaurantListContainer = document.getElementById(
       'restaurants__list',
     );
-    const loadingIndicator = document.getElementById('loading_indicator');
+    const skeletonUiContainer = document.getElementById('loading_indicator');
     const container = document.getElementById('container');
     for (let i = 0; i < 8; i++) {
-      loadingIndicator.innerHTML += RestaurantItemSkeleton();
+      skeletonUiContainer.innerHTML += RestaurantItemSkeleton();
     }
     restaurantListContainer.style.display = 'none';
     try {
@@ -68,7 +68,7 @@ const Home = {
         );
       });
       restaurantListContainer.style.display = 'grid';
-      loadingIndicator.style.display = 'none';
+      skeletonUiContainer.style.display = 'none';
     } catch (err) {
       console.log(err);
       container.innerHTML += createErrorMessageTemplate(

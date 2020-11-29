@@ -15,6 +15,7 @@ $skeleton-ui-circle-size: 50px !default;
 $skeleton-ui-hr-height: 2px !default;
 
 $skeleton-ui-line-border-radius: 15px !default;
+$skeleton-ui-line-border-radius-none: 0 !default;
 $skeleton-ui-line-height: 12px !default;
 $skeleton-ui-line-margin-bottom: 8px !default;
 
@@ -239,4 +240,8 @@ $skeleton-ui-square-height: 150px !default;
     height: $skeleton-ui-square-height;
 
     @extend %skeleton-ui-animation;
+}
+.skeleton-ui-border-none {
+    border: none;
+    border-radius: $skeleton-ui-line-border-radius-none;
 }
