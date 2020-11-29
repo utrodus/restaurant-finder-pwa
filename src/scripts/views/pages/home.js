@@ -2,7 +2,7 @@
 import RestaurantsDbSource from '../../data/restaurants-source';
 import createRestaurantItemTemplate from '../templates/restaurant-item-template';
 import { createErrorMessageTemplate } from '../templates/message-template';
-import RestaurantItemSkeleton from '../templates/skeleton-ui-template';
+import { RestaurantItemSkeleton } from '../templates/skeleton-ui-template';
 
 const Home = {
   async render() {

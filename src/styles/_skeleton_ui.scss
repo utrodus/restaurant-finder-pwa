@@ -1,29 +1,29 @@
 /* Variables */
-$skeleton-element-color: rgba(0, 0, 0, 0.17) !default;
+$skeleton-ui-element-color: rgba(0, 0, 0, 0.17) !default;
 
-$skeleton-loading-animation-time: 1.3s !default;
+$skeleton-ui-loading-animation-time: 1.3s !default;
 
-$skeleton-margin-standart: 16px !default;
-$skeleton-margin-small: $skeleton-margin-standart / 2 !default;
+$skeleton-ui-margin-standart: 16px !default;
+$skeleton-ui-margin-small: $skeleton-ui-margin-standart / 2 !default;
 
-$skeleton-card-box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.17) !default;
-$skeleton-card-background-color: #ffffff !default;
-$skeleton-card-border-radius: 5px !default;
+$skeleton-ui-card-box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.17) !default;
+$skeleton-ui-card-background-color: #ffffff !default;
+$skeleton-ui-card-border-radius: 5px !default;
 
-$skeleton-circle-size: 50px !default;
+$skeleton-ui-circle-size: 50px !default;
 
-$skeleton-hr-height: 2px !default;
+$skeleton-ui-hr-height: 2px !default;
 
-$skeleton-line-border-radius: 15px !default;
-$skeleton-line-height: 12px !default;
-$skeleton-line-margin-bottom: 8px !default;
+$skeleton-ui-line-border-radius: 15px !default;
+$skeleton-ui-line-height: 12px !default;
+$skeleton-ui-line-margin-bottom: 8px !default;
 
-$skeleton-headline-height: $skeleton-line-height * 2 !default;
+$skeleton-ui-headline-height: $skeleton-ui-line-height * 2 !default;
 
-$skeleton-square-height: 150px !default;
+$skeleton-ui-square-height: 150px !default;
 
 /* Animation */
-@keyframes ssc-loading {
+@keyframes skeleton-ui-loading {
     from {
         transform: translateX(-100%);
     }
@@ -33,13 +33,13 @@ $skeleton-square-height: 150px !default;
 }
 
 /* Animation partial */
-%ssc-animation {
+%skeleton-ui-animation {
     position: relative;
     overflow: hidden;
 
     &:after {
         content: "";
-        animation: ssc-loading $skeleton-loading-animation-time infinite;
+        animation: skeleton-ui-loading $skeleton-ui-loading-animation-time infinite;
         height: 100%;
         left: 0;
         position: absolute;
@@ -52,43 +52,43 @@ $skeleton-square-height: 150px !default;
 }
 
 /** Main class */
-.ssc {
+.skeleton-ui {
     cursor: progress;
     user-select: none;
 }
 
 /** Helpers classes */
-.ssc {
+.skeleton-ui {
     .mb {
-        margin-bottom: $skeleton-margin-standart;
+        margin-bottom: $skeleton-ui-margin-standart;
     }
 
     .mt {
-        margin-top: $skeleton-margin-standart;
+        margin-top: $skeleton-ui-margin-standart;
     }
 
     .mr {
-        margin-right: $skeleton-margin-standart;
+        margin-right: $skeleton-ui-margin-standart;
     }
 
     .ml {
-        margin-left: $skeleton-margin-standart;
+        margin-left: $skeleton-ui-margin-standart;
     }
 
     .mbs {
-        margin-bottom: $skeleton-margin-small;
+        margin-bottom: $skeleton-ui-margin-small;
     }
 
     .mts {
-        margin-top: $skeleton-margin-small;
+        margin-top: $skeleton-ui-margin-small;
     }
 
     .mrs {
-        margin-right: $skeleton-margin-small;
+        margin-right: $skeleton-ui-margin-small;
     }
 
     .mls {
-        margin-left: $skeleton-margin-small;
+        margin-left: $skeleton-ui-margin-small;
     }
 
     .w-10 {
@@ -176,67 +176,67 @@ $skeleton-square-height: 150px !default;
 }
 
 /** Wrapper class */
-.ssc-wrapper {
-    padding: $skeleton-margin-standart;
+.skeleton-ui-wrapper {
+    padding: $skeleton-ui-margin-standart;
 }
 
 /* Figures, Objects */
-.ssc-card {
+.skeleton-ui-card {
     display: block;
     width: 100%;
     height: 100%;
-    border-radius: $skeleton-card-border-radius;
-    box-shadow: $skeleton-card-box-shadow;
-    background-color: $skeleton-card-background-color;
+    border-radius: $skeleton-ui-card-border-radius;
+    box-shadow: $skeleton-ui-card-box-shadow;
+    background-color: $skeleton-ui-card-background-color;
 }
 
-.ssc-circle {
+.skeleton-ui-circle {
     display: block;
-    background-color: $skeleton-element-color;
+    background-color: $skeleton-ui-element-color;
     border-radius: 50%;
-    width: $skeleton-circle-size;
-    height: $skeleton-circle-size;
+    width: $skeleton-ui-circle-size;
+    height: $skeleton-ui-circle-size;
 
-    @extend %ssc-animation;
+    @extend %skeleton-ui-animation;
 }
 
-.ssc-hr {
+.skeleton-ui-hr {
     display: block;
     width: 100%;
-    background-color: $skeleton-element-color;
-    height: $skeleton-hr-height;
+    background-color: $skeleton-ui-element-color;
+    height: $skeleton-ui-hr-height;
 }
 
-.ssc-line {
+.skeleton-ui-line {
     display: block;
-    background-color: $skeleton-element-color;
-    border-radius: $skeleton-line-border-radius;
-    margin-bottom: $skeleton-line-margin-bottom;
+    background-color: $skeleton-ui-element-color;
+    border-radius: $skeleton-ui-line-border-radius;
+    margin-bottom: $skeleton-ui-line-margin-bottom;
     width: 100%;
-    height: $skeleton-line-height;
+    height: $skeleton-ui-line-height;
 
     &:last-child {
         margin-bottom: unset;
     }
 
-    @extend %ssc-animation;
+    @extend %skeleton-ui-animation;
 }
 
-.ssc-head-line {
+.skeleton-ui-head-line {
     display: block;
-    background-color: $skeleton-element-color;
-    border-radius: $skeleton-line-border-radius;
+    background-color: $skeleton-ui-element-color;
+    border-radius: $skeleton-ui-line-border-radius;
     width: 100%;
-    height: $skeleton-headline-height;
+    height: $skeleton-ui-headline-height;
 
-    @extend %ssc-animation;
+    @extend %skeleton-ui-animation;
 }
 
-.ssc-square {
+.skeleton-ui-square {
     display: block;
-    background-color: $skeleton-element-color;
+    background-color: $skeleton-ui-element-color;
     width: 100%;
-    height: $skeleton-square-height;
+    height: $skeleton-ui-square-height;
 
-    @extend %ssc-animation;
+    @extend %skeleton-ui-animation;
 }
