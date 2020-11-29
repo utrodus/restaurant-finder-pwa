@@ -1,5 +1,6 @@
-import RestaurantsDbSource from '../../data/restaurants-source';
-import { createRestaurantItemTemplate, createErrorMessageTemplate } from '../templates/template-creator';
+import RestaurantsDbSource from "../../data/restaurants-source";
+import  createRestaurantItemTemplate from "../templates/restaurant-item-template";
+import { createErrorMessageTemplate } from "../templates/message-template";
 
 const Home = {
   async render() {
@@ -46,24 +47,24 @@ const Home = {
   },
 
   async afterRender() {
-    console.log('coba');
+    console.log("coba");
     let restaurants = [];
     const restaurantListContainer = document.getElementById(
-      'restaurants__list',
+      "restaurants__list"
     );
-    const container = document.getElementById(
-      'container',
-    );
+    const container = document.getElementById("container");
     try {
       restaurants = await RestaurantsDbSource.restaurantsList();
       restaurants.forEach((restaurant) => {
         restaurantListContainer.innerHTML += createRestaurantItemTemplate(
-          restaurant,
+          restaurant
         );
       });
     } catch (err) {
       console.log(err);
-      container.innerHTML += createErrorMessageTemplate('Gagal Memuat Restaurant, Mohon Periksa Koneksi Internet Anda');
+      container.innerHTML += createErrorMessageTemplate(
+        "Gagal Memuat Restaurant, Mohon Periksa Koneksi Internet Anda"
+      );
     }
   },
 };

@@ -1,9 +1,6 @@
-import FavoriteRestoIdb from '../../data/restaurants-idb-source';
-
-import {
-  createRestaurantItemTemplate,
-  createEmptyFavoritePageTemplate,
-} from '../templates/template-creator';
+import FavoriteRestoIdb from "../../data/restaurants-idb-source";
+import createRestaurantItemTemplate from "../templates/restaurant-item-template";
+import { createEmptyFavoritePageTemplate } from "../templates/message-template";
 
 const Favorites = {
   async render() {
@@ -25,11 +22,11 @@ const Favorites = {
 
   async afterRender() {
     const favoritesPageContainer = document.getElementById(
-      'favoritesContainer',
+      "favoritesContainer"
     );
     const restaurants = await FavoriteRestoIdb.getAllRestaurants();
     const restaurantListContainer = document.getElementById(
-      'restaurants__list',
+      "restaurants__list"
     );
     if (restaurants === undefined || restaurants.length === 0) {
       favoritesPageContainer.innerHTML += createEmptyFavoritePageTemplate();
@@ -37,7 +34,7 @@ const Favorites = {
 
     restaurants.forEach((restaurant) => {
       restaurantListContainer.innerHTML += createRestaurantItemTemplate(
-        restaurant,
+        restaurant
       );
     });
   },
