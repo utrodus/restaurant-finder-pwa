@@ -8,19 +8,22 @@ import { DetailRestaurantSkeleton } from '../templates/skeleton-ui-template';
 const Detail = {
   async render() {
     return `
+    <section class="content">
        <article class="detail">
         <div id="favoriteButtonContainer"></div>
        <section class="container" id="loading_indicator">
         </section>
-       <section class="container" id="detailContent">
+       <section class="container" id="detail">
         </section>
       </article>
+    </section>
     `;
   },
 
   async afterRender() {
+    window.scrollTo(0, 0);
     const url = UrlParser.parseActiveUrlWithoutCombiner();
-    const detailPageContainer = document.querySelector('#detailContent');
+    const detailPageContainer = document.querySelector('#detail');
     const skeletonUiContainer = document.querySelector('#loading_indicator');
     detailPageContainer.style.display = 'none';
     skeletonUiContainer.innerHTML = DetailRestaurantSkeleton();
@@ -29,13 +32,14 @@ const Detail = {
       detailPageContainer.innerHTML = createRestaurantDetailTemplate(
         detailRestaurant,
       );
-      detailPageContainer.style.display = 'block';
       skeletonUiContainer.style.display = 'none';
+      detailPageContainer.style.display = 'block';
       await FavButtonInitiator.init({
         favButtonContainer: document.querySelector('#favoriteButtonContainer'),
         restaurant: detailRestaurant,
       });
     } catch (error) {
+      skeletonUiContainer.style.display = 'none';
       detailPageContainer.innerHTML += createErrorMessageTemplate(
         'Gagal Memuat Detail Restaurant, Mohon Periksa Koneksi Internet Anda',
       );
