@@ -89,4 +89,4 @@ const createRestaurantDetailTemplate = (detail) => `
         </section>
 `;
 
-export default createRestaurantDetailTemplate ;
+export default createRestaurantDetailTemplate;

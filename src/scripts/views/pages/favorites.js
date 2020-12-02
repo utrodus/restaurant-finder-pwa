@@ -5,14 +5,17 @@ import { createEmptyFavoritePageTemplate } from '../templates/message-template';
 const Favorites = {
   async render() {
     return `
+     <div class="jumbotron">
+        <div class="jumbotron__content">
+          <h1 tabindex="0">Best Favorites Restaurant</h1>
+          <h2 tabindex="0">
+            Daftar restaurant terfavorit yang telah Anda tambahkan
+          </h2>
+        </div>
+      </div>
       <section class="content">
         <article id="favoritesRestaurant" class="favorites_restaurant">
           <div class="container" id="favoritesContainer">
-            <h1>Favorites</h1>
-            <hr class="separator" />
-            <p>
-             Daftar Restaurant Terfavorit
-            </p>
           </div>
           <div id="restaurants__list" class="restaurants__list"></div>
         </article>
