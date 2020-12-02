@@ -10,11 +10,9 @@ const createMenuItemTemplate = (menu) => `
 
 const createReviewItemTemplate = (review) => `
 <div class="review_item" tabindex="0" >
-<p class="reviewer_name" tabindex="0">${
-  review.name === undefined ? '' : review.name
+<p class="reviewer_name" tabindex="0">${review.name === undefined ? '' : review.name
 }</p>
-<p class="review_date" tabindex="0">${
-  review.date === undefined ? '' : review.date
+<p class="review_date" tabindex="0">${review.date === undefined ? '' : review.date
 }</p>
 <p class="review_content" tabindex="0">
   ${review.review === undefined ? '' : review.review}
@@ -79,7 +77,6 @@ const createRestaurantDetailTemplate = (detail) => `
             </div>
           </div>
           </section>
-
           <section class="customer__reviews" >
            <div class="detail__subtitle">
             <p tabindex="0">Customer Reviews</p>
@@ -88,34 +85,8 @@ const createRestaurantDetailTemplate = (detail) => `
             ${detail.customerReviews
     .map((review) => createReviewItemTemplate(review))
     .join('')}
-            <div class="review_item">
-              <p class="reviewer_name" tabindex="0">Utrodus Said</p>
-              <p class="review_date" tabindex="0">13 November 2019</p>
-              <p class="review_content" tabindex="0">
-                "Went on, still gaining velocity, the palpitation of night and
-                day merged into one continuous
-              </p>
-            </div>
-              <form class="review_form" >
-              <label for="name" >Name</label>
-              <input
-                id="name"
-                aria-label="Your name"
-                type="text"
-                class="input_name"
-                tabindex="0"
-              />
-              <label for="description" >Your Review</label>
-              <textarea
-                id="description"
-                aria-label="Your Review"
-                class="input_description"
-                rows="5"
-                tabindex="0"
-              ></textarea>
-              <button class="review_btn" tabindex="0">Add Review</button>
-           </form>
+
         </section>
 `;
 
-export default createRestaurantDetailTemplate;
+export default createRestaurantDetailTemplate ;

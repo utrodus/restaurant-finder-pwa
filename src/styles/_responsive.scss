@@ -158,13 +158,18 @@
           }
         }
       }
+      article.detail{
+        #form__review{
+              padding: 0 4rem 2.5rem !important;
+        }
+      }
     }
   }
 }
 
 @media screen and (min-width: 900px) {
   .container {
-    padding: 4rem 2.8rem !important;
+    padding: 2rem 2.8rem !important;
   }
 
   header {
@@ -466,10 +471,13 @@
           }
         }
       }
+    }
 
+    #form__review {
+      padding: 0 2.8rem 4rem !important;
       .review_form {
-        margin-top: 2rem;
         width: 100%;
+        max-width: 60%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -569,6 +577,10 @@
         .skeleton-ui-square {
           height: 20rem;
         }
+      }
+      #form__review {
+        max-width: 1200px;
+        margin: 0 auto;
       }
     }
   }

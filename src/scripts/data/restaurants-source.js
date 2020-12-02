@@ -1,3 +1,4 @@
+import CONFIG from '../globals/config';
 import API_ENDPOINT from '../globals/api-endpoint';
 
 class RestaurantsDbSource {
@@ -16,6 +17,25 @@ class RestaurantsDbSource {
   static async detailPicture(id, option) {
     const response = await fetch(API_ENDPOINT.PICTURE(id, option));
     return response.json();
+  }
+
+  static async postReview(data) {
+    const myHeaders = new Headers();
+    myHeaders.append('Content-Type', 'application/json');
+    myHeaders.append('X-Auth-Token', CONFIG.TOKEN);
+
+    const raw = JSON.stringify(data);
+
+    const requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: raw,
+    };
+
+    await fetch(API_ENDPOINT.POST_REVIEW, requestOptions)
+      .then((response) => response.text())
+      .then((result) => { console.log(result); return result; })
+      .catch((error) => console.log('error', error));
   }
 }
 

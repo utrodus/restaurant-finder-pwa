@@ -98,9 +98,9 @@ main {
       #loading_indicator {
         .restaurant__skeleton {
           padding: 0;
-          .skeleton-ui-square{
-            border-top-left-radius: 5px ;
-            border-top-right-radius: 5px ;
+          .skeleton-ui-square {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
           }
           .restaurant__skeleton_content {
             padding: 0 1rem 1rem;
@@ -427,64 +427,66 @@ main {
         }
       }
     }
-    .review_form {
-      margin-top: 3rem;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      .input_name,
-      .input_description {
+    #form__review {
+      padding:0 2rem  1.5rem;
+      .review_form {
         width: 100%;
-        min-height: 1.8rem;
-        border: 1px solid #b1b1b1;
-        padding-left: 0.3rem;
-        border-radius: 4px;
-        font-family: $DMSans;
-        color: grey;
-      }
-
-      input {
-        margin-bottom: 0.5rem;
-      }
-      textarea {
-        padding: 0.5rem 1rem;
-      }
-
-      label {
-        font-family: $WorkSans;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 0.9em;
-        line-height: 32px;
-        color: #5a5a5a;
-      }
-
-      button {
-        &.review_btn {
-          margin: 1.5rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .input_name,
+        .input_description {
           width: 100%;
-          min-height: 45px;
-          @include reset__link;
-          display: inline-block;
-          padding: 0.5rem 3.7rem;
-          background-color: #e0ad3d;
-          color: white;
+          min-height: 1.8rem;
+          border: 1px solid #b1b1b1;
+          padding-left: 0.3rem;
+          border-radius: 4px;
           font-family: $DMSans;
-          font-size: 1em;
+          color: grey;
+        }
+
+        input {
+          margin-bottom: 0.5rem;
+        }
+        textarea {
+          padding: 0.5rem 1rem;
+        }
+
+        label {
+          font-family: $WorkSans;
           font-style: normal;
-          font-weight: bold;
-          line-height: 26px;
-          cursor: pointer;
-          border: none;
-          border-radius: 7px;
-          &:hover {
-            background-color: #c5952d;
+          font-weight: 500;
+          font-size: 0.9em;
+          line-height: 32px;
+          color: #5a5a5a;
+        }
+
+        button {
+          &.review_btn {
+            margin: 1.5rem 0;
+            width: 100%;
+            min-height: 45px;
+            @include reset__link;
+            display: inline-block;
+            padding: 0.5rem 3.7rem;
+            background-color: #e0ad3d;
             color: white;
-          }
-          &:focus {
-            background-color: #ce9928;
-            color: white;
+            font-family: $DMSans;
+            font-size: 1em;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 26px;
+            cursor: pointer;
+            border: none;
+            border-radius: 7px;
+            &:hover {
+              background-color: #c5952d;
+              color: white;
+            }
+            &:focus {
+              background-color: #ce9928;
+              color: white;
+            }
           }
         }
       }
