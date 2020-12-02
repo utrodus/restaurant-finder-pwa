@@ -45,6 +45,7 @@
   "dependencies": {
     "idb": "^5.0.7",
     "regenerator-runtime": "^0.13.5",
+    "toastify-js": "^1.9.3",
     "workbox-core": "^5.1.4",
     "workbox-expiration": "^5.1.4",
     "workbox-precaching": "^5.1.4",

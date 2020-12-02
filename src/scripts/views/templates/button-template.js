@@ -1,3 +1,5 @@
+import 'toastify-js/src/toastify.css';
+
 const createFavoriteButtonTemplate = () => `
 <button
           aria-label="add to favorite"

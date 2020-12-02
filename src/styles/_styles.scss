@@ -428,7 +428,7 @@ main {
       }
     }
     #form__review {
-      padding:0 2rem  1.5rem;
+      padding: 0 2rem 1.5rem;
       .review_form {
         width: 100%;
         display: flex;
@@ -505,5 +505,12 @@ main {
       color: #808080;
       font-weight: 500;
     }
+  }
+}
+
+body {
+  .toastFavorited {
+    color: #ff4040;
+    font-weight: 500;
   }
 }
