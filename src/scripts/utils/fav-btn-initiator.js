@@ -1,4 +1,5 @@
 import Toastify from 'toastify-js';
+
 import {
   createFavoriteButtonTemplate,
   createFavoritedButtonTemplate,
@@ -33,7 +34,7 @@ const FavButtonInitiator = {
         text: 'Success Add Restaurant To Favorites',
         duration: 3000,
         newWindow: true,
-        close: true,
+        close: false,
         gravity: 'bottom',
         position: 'center',
         backgroundColor: 'linear-gradient(to right, #EB3349, #F45C43)',
@@ -53,7 +54,7 @@ const FavButtonInitiator = {
         duration: 3000,
         newWindow: true,
         className: 'toastFavorited',
-        close: true,
+        close: false,
         gravity: 'bottom',
         position: 'center',
         backgroundColor: '#ffffff',
