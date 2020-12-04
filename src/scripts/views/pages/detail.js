@@ -1,6 +1,7 @@
 /* eslint-disable no-alert */
 import UrlParser from '../../routes/url-parser';
 import RestaurantsDbSource from '../../data/restaurants-source';
+import FavoriteRestoIdb from '../../data/restaurants-idb-source';
 import { createErrorMessageTemplate } from '../templates/message-template';
 import FavButtonInitiator from '../../utils/fav-btn-initiator';
 import { DetailRestaurantSkeleton } from '../templates/skeleton-ui-template';
@@ -62,6 +63,7 @@ const Detail = {
       skeletonUiContainer.style.display = 'none';
       detailPageContainer.style.display = 'block';
       await FavButtonInitiator.init({
+        favoriteRestaurant: FavoriteRestoIdb,
         favButtonContainer: document.querySelector('#favoriteButtonContainer'),
         restaurant: detailRestaurant,
       });

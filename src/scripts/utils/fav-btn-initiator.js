@@ -4,12 +4,12 @@ import {
   createFavoriteButtonTemplate,
   createFavoritedButtonTemplate,
 } from '../views/templates/button-template';
-import FavoriteRestoIdb from '../data/restaurants-idb-source';
 
 const FavButtonInitiator = {
-  async init({ favButtonContainer, restaurant }) {
+  async init({ favoriteRestaurant, favButtonContainer, restaurant }) {
     this._favButtonContainer = favButtonContainer;
     this._restaurant = restaurant;
+    this._favoriteRestaurant = favoriteRestaurant;
     await this._renderButton();
   },
   async _renderButton() {
@@ -21,7 +21,7 @@ const FavButtonInitiator = {
     }
   },
   async _isRestaurantExits(id) {
-    const restaurant = await FavoriteRestoIdb.getRestaurant(id);
+    const restaurant = await this._favoriteRestaurant.getRestaurant(id);
     return !!restaurant;
   },
 
@@ -40,7 +40,7 @@ const FavButtonInitiator = {
         backgroundColor: 'linear-gradient(to right, #EB3349, #F45C43)',
         stopOnFocus: true,
       }).showToast();
-      await FavoriteRestoIdb.putRestaurant(this._restaurant);
+      await this._favoriteRestaurant.putRestaurant(this._restaurant);
       await this._renderButton();
     });
   },
@@ -60,7 +60,7 @@ const FavButtonInitiator = {
         backgroundColor: '#ffffff',
         stopOnFocus: true,
       }).showToast();
-      await FavoriteRestoIdb.deleteRestaurant(this._restaurant.id);
+      await this._favoriteRestaurant.deleteRestaurant(this._restaurant.id);
       await this._renderButton();
     });
   },

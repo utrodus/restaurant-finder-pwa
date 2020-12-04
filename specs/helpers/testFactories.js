@@ -1,11 +1,11 @@
 import FavButtonInitiator from '../../src/scripts/utils/fav-btn-initiator';
+import FavoriteRestoIdb from '../../src/scripts/data/restaurants-idb-source';
 
-const createFavButtonPresenterWithRestaurant = async (restaurant) => {
+const createFavButtonPresenterWithRestaurant = async (restaurantId) => {
   await FavButtonInitiator.init({
+    favoriteRestaurant: FavoriteRestoIdb,
     favButtonContainer: document.querySelector('#favoriteButtonContainer'),
-    data: {
-      restaurant,
-    },
+    restaurant: restaurantId,
   });
 };
 
