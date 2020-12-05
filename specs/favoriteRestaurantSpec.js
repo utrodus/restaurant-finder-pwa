@@ -34,7 +34,7 @@ describe('Favorite Restaurant', () => {
     FavoriteRestoIdb.deleteRestaurant(1);
   });
 
-  it('should not add a restaurant again when its already liked', async () => {
+  it('should not add a restaurant again when its already favorited', async () => {
     await TestFactories.createFavButtonPresenterWithRestaurant({ id: 1 });
 
     await FavoriteRestoIdb.putRestaurant({ id: 1 });
