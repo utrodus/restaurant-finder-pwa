@@ -20,7 +20,6 @@ const FavoriteRestaurantArray = {
       return;
     }
 
-    // pastikan id ini belum ada dalam daftar favoriteRestaurant
     if (this.getRestaurant(restaurant.id)) {
       return;
     }
@@ -29,8 +28,6 @@ const FavoriteRestaurantArray = {
   },
 
   deleteRestaurant(id) {
-    // cara boros menghapus restaurant dengan meng-copy restaurant yang ada
-    // kecuali restaurant dengan id === id
     favoriteRestaurants = favoriteRestaurants.filter((restaurant) => restaurant.id !== id);
   },
 };
