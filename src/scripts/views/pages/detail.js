@@ -23,6 +23,7 @@ const Detail = {
               <label for="name" >Name</label>
               <input
                 id="name"
+                name="name"
                 aria-label="Your name"
                 type="text"
                 class="input_name"
@@ -31,6 +32,7 @@ const Detail = {
               <label for="description" >Your Review</label>
               <textarea
                 id="description"
+                name="description"
                 aria-label="Your Review"
                 class="input_description"
                 rows="5"
