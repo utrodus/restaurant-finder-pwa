@@ -5,7 +5,7 @@ const createRestaurantItemTemplate = (restaurant) => `
             <div class="restaurant__item">
                 <img class="thumbnail"
                     src="${API_ENDPOINT.PICTURE(restaurant.pictureId, 'small')}"
-                    alt="${restaurant.name}">
+                    alt="${restaurant.name}"  crossorigin="anonymous">
                 <div class="content">
                     <h1 class="title" tabindex="0" aria-label="Nama Restaurant ${
   restaurant.name

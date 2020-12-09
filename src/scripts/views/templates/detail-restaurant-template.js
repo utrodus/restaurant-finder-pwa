@@ -25,7 +25,7 @@ const createRestaurantDetailTemplate = (detail) => `
           <div class="restaurant_img">
           <img
             src="${API_ENDPOINT.PICTURE(detail.pictureId, 'medium')}"
-            alt="${detail.name}"
+            alt="${detail.name}"  crossorigin="anonymous"
           />
           </div>
           <div class="restaurant__info">
