@@ -64,6 +64,9 @@ module.exports = {
         {
           from: path.resolve(__dirname, 'src/public/'),
           to: path.resolve(__dirname, 'dist/'),
+          globOptions: {
+            ignore: ['**/images/**'], // CopyWebpackPlugin mengabaikan berkas yang berada di dalam folder images
+          },
         },
       ],
     }),
@@ -72,8 +75,11 @@ module.exports = {
     }),
     new ImageminWebpackPlugin({
       plugins: [
+        imageminPngquant({
+          quality: [0.3, 0.5],
+        }),
         ImageminMozjpeg({
-          quality: 50,
+          quality: 45,
           progressive: true,
         }),
       ],

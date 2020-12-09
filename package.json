@@ -6,6 +6,8 @@
   "scripts": {
     "start-dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
+    "build-image": "node sharp.js",
+    "lint": "eslint ./src",
     "test": "karma start",
     "e2e": "codeceptjs run --steps"
   },
@@ -26,6 +28,7 @@
     "file-loader": "^6.1.0",
     "html-webpack-plugin": "^4.3.0",
     "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.1",
     "imagemin-webpack-plugin": "^2.4.2",
     "jasmine-ajax": "^4.0.0",
     "jasmine-core": "^3.5.0",
@@ -39,6 +42,7 @@
     "node-sass": "^4.14.1",
     "puppeteer": "^5.5.0",
     "sass-loader": "^10.0.1",
+    "sharp": "^0.26.3",
     "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
