@@ -20,20 +20,18 @@ const Detail = {
       </section>
          <section id="form__review">
               <form class="review_form" >
-              <label for="name" >Name</label>
               <input
+              placeholder="Your Name"
                 id="name"
                 name="name"
-                aria-label="Your name"
                 type="text"
                 class="input_name"
                 tabindex="0"
               />
-              <label for="description" >Your Review</label>
               <textarea
+               placeholder="Review"
                 id="description"
                 name="description"
-                aria-label="Your Review"
                 class="input_description"
                 rows="5"
                 tabindex="0"

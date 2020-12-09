@@ -101,7 +101,6 @@ const DetailRestaurantSkeleton = () => `
               <label for="name" >Name</label>
               <input
                 id="name"
-                aria-label="Your name"
                 type="text"
                 class="input_name"
                 tabindex="0"
@@ -109,7 +108,6 @@ const DetailRestaurantSkeleton = () => `
               <label for="description" >Your Review</label>
               <textarea
                 id="description"
-                aria-label="Your Review"
                 class="input_description"
                 rows="5"
                 tabindex="0"

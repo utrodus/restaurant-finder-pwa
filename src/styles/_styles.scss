@@ -1,11 +1,20 @@
 .skip-link {
   position: absolute;
-  top: -40px;
+  top: -45px;
   left: 0;
   background-color: #e0ad3d;
   color: white;
-  padding: 8px;
   z-index: 100;
+  color: black;
+  padding: 8px 10px;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+  a {
+    @include reset__link;
+  }
   &:focus {
     top: 0;
     outline: 1px solid $activeLinkColor;
@@ -25,9 +34,8 @@ a {
     margin: 2.5rem 0;
     padding: 0.8rem 3.7rem;
     box-sizing: border-box;
-    border: 2px solid $primaryButtonColor;
-    background: none;
-    color: $primaryButtonColor;
+    background: $primaryButtonColor;
+    color: black;
     font-family: $DMSans;
     font-size: 1em;
     font-style: normal;
@@ -329,7 +337,7 @@ main {
       margin-top: 0.5rem;
     }
     .restaurant__categories {
-      color: $lightBlack;
+      color: $black;
       font-weight: 600;
       font-size: 1.6em;
       margin: 1.9rem 0 1rem;
@@ -344,8 +352,8 @@ main {
         padding: 0.5rem 1.3rem;
         border-radius: 8px;
         font-size: 0.9em;
-        font-weight: 500;
-        color: white;
+        font-weight: 600;
+        color: #673b08;
       }
     }
     p.description {
@@ -355,7 +363,7 @@ main {
     }
     .detail__subtitle {
       margin-top: 3rem;
-      p {
+      h3 {
         font-family: $WorkSans;
         font-size: 1.2em;
         font-weight: bold;
@@ -388,7 +396,7 @@ main {
         }
       }
       .rating {
-        p.total__rating {
+        h4.total__rating {
           font-size: 2.5em;
           font-weight: bold;
           color: $black;
@@ -415,7 +423,7 @@ main {
             font-weight: normal;
             font-size: 0.9em;
             line-height: 32px;
-            color: #eb9125;
+            color: $black;
           }
           &.review_content {
             font-family: $DMSans;
@@ -438,7 +446,7 @@ main {
         .input_name,
         .input_description {
           width: 100%;
-          min-height: 1.8rem;
+          min-height: 2.3rem;
           border: 1px solid #b1b1b1;
           padding-left: 0.3rem;
           border-radius: 4px;
@@ -470,7 +478,7 @@ main {
             @include reset__link;
             display: inline-block;
             padding: 0.5rem 3.7rem;
-            background-color: #e0ad3d;
+            background-color: $black;
             color: white;
             font-family: $DMSans;
             font-size: 1em;
@@ -510,7 +518,7 @@ main {
 }
 
 body {
-  .toastify{
+  .toastify {
     padding: 12px 20px;
     color: #ffffff;
     display: inline-block;
@@ -532,7 +540,6 @@ body {
     right: 0;
     max-width: fit-content;
     opacity: 1;
-    
   }
 
   .toastFavorited {

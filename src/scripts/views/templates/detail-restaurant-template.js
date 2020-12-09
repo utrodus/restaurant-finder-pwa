@@ -29,9 +29,9 @@ const createRestaurantDetailTemplate = (detail) => `
           />
           </div>
           <div class="restaurant__info">
-            <h2 class="restaurant__title" tabindex="0">${detail.name}</h2>
+            <h1 class="restaurant__title" tabindex="0">${detail.name}</h1>
             <p class="restaurant__address" tabindex="0">${detail.address}</p>
-            <h3 class="restaurant__categories" tabindex="0">Categories</h3>
+            <h2 class="restaurant__categories" tabindex="0">Categories</h2>
             <div class="category__wrapper">
             ${detail.categories
     .map((category) => createCategoryItemTemplate(category))
@@ -46,7 +46,7 @@ const createRestaurantDetailTemplate = (detail) => `
           <section class="secondary_content">
           <div class="menu">
             <div class="detail__subtitle">
-              <p tabindex="0">Food Menu</p>
+              <h3 tabindex="0">Food Menu</h3>
               <hr class="separator" />
             </div>
             <ul>
@@ -57,7 +57,7 @@ const createRestaurantDetailTemplate = (detail) => `
           </div>
           <div class="menu">
             <div class="detail__subtitle">
-              <p tabindex="0">Drink Menu</p>
+              <h3 tabindex="0">Drink Menu</h3>
               <hr class="separator" />
             </div>
             <ul>
@@ -68,18 +68,18 @@ const createRestaurantDetailTemplate = (detail) => `
           </div>
           <div class="rating_overview">
             <div class="detail__subtitle">
-              <p tabindex="0">Rating Overview</p>
+              <h3 tabindex="0">Rating Overview</h3>
               <hr class="separator" />
             </div>
             <div class="rating">
-              <p class="total__rating" tabindex="0">${detail.rating}</p>
+              <h4 class="total__rating" tabindex="0">${detail.rating}</h4>
             </div>
             </div>
           </div>
           </section>
           <section class="customer__reviews" >
            <div class="detail__subtitle">
-            <p tabindex="0">Customer Reviews</p>
+            <h3 tabindex="0">Customer Reviews</h3>
             <hr class="separator" />
             </div>
             ${detail.customerReviews
