@@ -112,7 +112,7 @@ const DetailRestaurantSkeleton = () => `
                 rows="5"
                 tabindex="0"
               ></textarea>
-              <button class="review_btn" tabindex="0">Add Review</button>
+              <button role="button" class="review_btn" tabindex="0" aria-label="Add Review">Add Review</button>
            </form>
         </section>
 `;

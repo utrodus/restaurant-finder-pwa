@@ -21,22 +21,26 @@ const Detail = {
          <section id="form__review">
               <form class="review_form" >
               <input
+              role="textbox"
               placeholder="Your Name"
                 id="name"
                 name="name"
                 type="text"
                 class="input_name"
                 tabindex="0"
+                 aria-label="name"
               />
               <textarea
+              role="textbox"
                placeholder="Review"
                 id="description"
                 name="description"
                 class="input_description"
                 rows="5"
                 tabindex="0"
+                 aria-label="review description"
               ></textarea>
-              <button id='btnAddReview' class="review_btn" tabindex="0">Add Review</button>
+              <button role="button" id='btnAddReview' class="review_btn" tabindex="0" aria-label="Add Review">Add Review</button>
            </form>
         </section>
       </article>
