@@ -5,7 +5,7 @@ const createRestaurantItemTemplate = (restaurant) => `
             <div class="restaurant__item">
                 <img class="thumbnail lazyload"
                     src="./images/placeholder-large.jpg"
-                    data-src="${API_ENDPOINT.PICTURE(restaurant.pictureId, 'small')}"
+                    data-src="${API_ENDPOINT.PICTURE(restaurant.pictureId, 'small')}" width="259" height="145.69"
                     alt="${restaurant.name}"  crossorigin="anonymous">
                 <div class="content">
                     <h1 class="title" tabindex="0" aria-label="Nama Restaurant ${

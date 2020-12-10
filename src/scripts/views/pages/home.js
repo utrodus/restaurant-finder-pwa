@@ -21,7 +21,7 @@ const Home = {
       <section class="content">
         <article class="featured">
           <figure class="featured__img">
-            <img src="./images/featured-img.jpg" alt="featured-img" tabindex="0"
+            <img src="./images/featured-img.jpg" alt="featured-img" width="536" height="332.98" tabindex="0"
             srcset="./images/featured-img-small.jpg 480w, ./images/featured-img-large.jpg 800w"
             sizes="(max-width: 600px) 480px, 800px" />
           </figure>

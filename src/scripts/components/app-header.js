@@ -10,7 +10,7 @@ class AppHeader extends HTMLElement {
         <div class="app__bar">
           <a id="menu__button" aria-label="navigation-menu" tabindex="0" href="#">☰</a>
           <a href="/" class="logo" tabindex="0">
-            <img src=" ./svg/logo.svg" alt="Logo Cari Resto" width="6.188rem"
+            <img src=" ./svg/logo.svg" alt="Logo Cari Resto" width="99" height="24.75"
           /></a>
         </div>
         <nav id="app__menu">
