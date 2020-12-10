@@ -3,8 +3,9 @@ import API_ENDPOINT from '../../globals/api-endpoint';
 const createRestaurantItemTemplate = (restaurant) => `
         <a href="#/detail/${restaurant.id}" tabindex="0" aria-label="restaurant item" class="restaurant__link">
             <div class="restaurant__item">
-                <img class="thumbnail"
-                    src="${API_ENDPOINT.PICTURE(restaurant.pictureId, 'small')}"
+                <img class="thumbnail lazyload"
+                    src="./images/placeholder-large.jpg"
+                    data-src="${API_ENDPOINT.PICTURE(restaurant.pictureId, 'small')}"
                     alt="${restaurant.name}"  crossorigin="anonymous">
                 <div class="content">
                     <h1 class="title" tabindex="0" aria-label="Nama Restaurant ${

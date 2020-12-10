@@ -7,7 +7,8 @@ import { RestaurantItemSkeleton } from '../templates/skeleton-ui-template';
 const Home = {
   async render() {
     return `
-           <div class="jumbotron">
+        <div class="jumbotron">
+
         <div class="jumbotron__content">
           <h1 tabindex="0">The Best Restaurants in Indonesia.</h1>
           <h2 tabindex="0">

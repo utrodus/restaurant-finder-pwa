@@ -4,6 +4,9 @@ import App from './views/app';
 import './components/app-header';
 import './components/app-footer';
 import RegSw from './utils/reg-sw';
+import 'lazysizes';
+// import a plugin
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 const app = new App({
   button: document.querySelector('#menu__button'),

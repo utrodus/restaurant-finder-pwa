@@ -25,4 +25,10 @@ fs.readdirSync(target)
       .toFile(path.resolve(__dirname, `${destination}/${image.split('.')
         .slice(0, -1)
         .join('.')}-small.jpg`));
+
+    sharp(`${target}/${image}`)
+      .resize(1300)
+      .toFile(
+        path.resolve(__dirname, `${destination}/${image.split('.').slice(0, -1).join('.')}-xl.jpg`),
+      );
   });
