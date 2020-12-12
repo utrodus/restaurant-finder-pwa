@@ -60,6 +60,7 @@
   }
 
   .jumbotron {
+    background-image: url("../public/hero/hero-image-large.jpg");
     .jumbotron__content {
       padding: 4.5rem 0 3rem 0;
       color: $white;
@@ -158,9 +159,9 @@
           }
         }
       }
-      article.detail{
-        #form__review{
-              padding: 0 4rem 2.5rem !important;
+      article.detail {
+        #form__review {
+          padding: 0 4rem 2.5rem !important;
         }
       }
     }
@@ -228,7 +229,7 @@
   }
 
   .jumbotron {
-
+    background-image: url("../public/hero/hero-image-large.jpg");
 
     .jumbotron__content {
       padding: 5.5rem 0 3rem 0;
@@ -541,7 +542,9 @@
     max-width: 1200px;
     margin: 0 auto;
   }
-
+  .jumbotron {
+    background-image: url("../public/hero/hero-image-xl.jpg");
+  }
   main {
     .content {
       .featured {
