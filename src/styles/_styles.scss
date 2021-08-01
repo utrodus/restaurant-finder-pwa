@@ -12,9 +12,11 @@
   display: flex;
   font-weight: 600;
   align-items: center;
+
   a {
     @include reset__link;
   }
+
   &:focus {
     top: 0;
     outline: 1px solid $activeLinkColor;
@@ -42,10 +44,12 @@ a {
     font-weight: bold;
     line-height: 26px;
     cursor: pointer;
+
     &:hover {
       background-color: #e0ad3d;
       color: white;
     }
+
     &:focus {
       outline: 1px solid $activeLinkColor;
       background-color: #e0ad3d;
@@ -70,7 +74,12 @@ main {
     .featured {
       .featured__img {
         margin: 4rem 0 1rem 0;
+
+        img {
+          object-fit: cover;
+        }
       }
+
       .featured__content {
         h1 {
           font-size: 1.9em;
@@ -78,6 +87,7 @@ main {
           font-weight: bold;
           line-height: 40px;
         }
+
         p {
           font-size: 0.9em;
           color: $lightBlack;
@@ -87,15 +97,18 @@ main {
         }
       }
     }
+
     .restaurants {
       padding: 1.3rem 0;
       background-color: $bodyContentColor;
+
       h1 {
         font-size: 1.9em;
         color: $black;
         font-weight: bold;
         line-height: 40px;
       }
+
       p {
         font-size: 0.9em;
         color: $lightBlack;
@@ -103,18 +116,22 @@ main {
         font-weight: 400;
         line-height: 32px;
       }
+
       #loading_indicator {
         .restaurant__skeleton {
           padding: 0;
+
           .skeleton-ui-square {
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
           }
+
           .restaurant__skeleton_content {
             padding: 0 1rem 1rem;
           }
         }
       }
+
       .restaurants__list {
         padding: 0 2rem;
 
@@ -122,6 +139,7 @@ main {
           @include reset__link;
           width: 100%;
           height: 100%;
+
           &:focus {
             outline: 3px solid $activeLinkColor !important;
           }
@@ -130,13 +148,16 @@ main {
             margin: 2rem 0;
             overflow: hidden;
             @include card-style;
+
             .thumbnail {
               height: 11rem;
               max-height: 11rem;
               object-fit: cover;
             }
+
             .content {
               padding: 15px 20px 10px 20px;
+
               h1 {
                 font-size: 1.1em;
                 line-height: 28px;
@@ -149,8 +170,10 @@ main {
                 overflow: hidden;
                 text-overflow: clip;
               }
+
               p {
                 position: relative;
+
                 &.description {
                   display: block;
                   display: -webkit-box;
@@ -165,25 +188,30 @@ main {
                   text-overflow: ellipsis;
                 }
               }
+
               .restaurant__address,
               .restaurant__rating {
                 padding: 0.2rem 0;
                 display: flex;
                 align-items: center;
+
                 .marker {
                   margin: 0 0.5rem 0 0;
+
                   i {
                     &.lni-map-marker {
                       color: #ff4c54;
                     }
                   }
                 }
+
                 i {
                   &.star {
                     margin: 0 0.5rem 0 0;
                     color: #fbbf36;
                   }
                 }
+
                 p {
                   color: $lightBlack;
                   font-size: 0.75em;
@@ -195,21 +223,25 @@ main {
         }
       }
     }
+
     .favorites_restaurant {
       padding: 1.3rem 0;
       background-color: white;
+
       h1 {
         font-size: 1.9em;
         color: $black;
         font-weight: bold;
         line-height: 40px;
       }
+
       p {
         font-size: 1.5em;
         color: $lightBlack;
         font-family: $DMSans;
         font-weight: 400;
         line-height: 32px;
+
         &.empty__favorite {
           text-align: center;
           margin: 5rem 0;
@@ -219,24 +251,30 @@ main {
 
       .restaurants__list {
         padding: 0 2rem;
+
         a {
           @include reset__link;
           width: 100%;
           height: 100%;
+
           &:focus {
             outline: 3px solid $activeLinkColor !important;
           }
+
           .restaurant__item {
             margin: 2rem 0;
             overflow: hidden;
             @include card-style;
+
             .thumbnail {
               height: 11rem;
               max-height: 11rem;
               object-fit: cover;
             }
+
             .content {
               padding: 15px 20px 10px 20px;
+
               h1 {
                 font-size: 1.1em;
                 line-height: 28px;
@@ -249,9 +287,11 @@ main {
                 overflow: hidden;
                 text-overflow: clip;
               }
+
               p {
                 position: relative;
                 color: $lightBlack;
+
                 &.description {
                   display: block;
                   display: -webkit-box;
@@ -267,25 +307,30 @@ main {
                   text-overflow: ellipsis;
                 }
               }
+
               .restaurant__address,
               .restaurant__rating {
                 padding: 0.2rem 0;
                 display: flex;
                 align-items: center;
+
                 .marker {
                   margin: 0 0.5rem 0 0;
+
                   i {
                     &.lni-map-marker {
                       color: #ff4c54;
                     }
                   }
                 }
+
                 i {
                   &.star {
                     margin: 0 0.5rem 0 0;
                     color: #fbbf36;
                   }
                 }
+
                 p {
                   font-size: 0.75em;
                   line-height: normal;
@@ -300,6 +345,7 @@ main {
 
   article.detail {
     margin-top: 1.5rem;
+
     .restaurant__title {
       margin-top: 1rem;
       color: $black;
@@ -324,30 +370,36 @@ main {
         display: flex;
         align-items: center;
         justify-content: center;
+
         &.favorited__btn {
           background-color: #ff4040;
           color: #ffffff;
         }
       }
     }
+
     .restaurant_img {
       img {
         border-radius: 8px;
       }
     }
+
     .restaurant__address {
       font-family: $DMSans;
       margin-top: 0.5rem;
     }
+
     .restaurant__categories {
       color: $black;
       font-weight: 600;
       font-size: 1.6em;
       margin: 1.9rem 0 1rem;
     }
+
     .category__wrapper {
       display: flex;
       flex-wrap: wrap;
+
       p.category {
         margin: 0 1rem 0.8rem 0;
         display: inline-block;
@@ -359,28 +411,35 @@ main {
         color: #673b08;
       }
     }
+
     p.description {
       margin: 1.5rem 0;
       font-family: $DMSans;
       color: $lightBlack;
     }
+
     .detail__subtitle {
       margin-top: 3rem;
+
       h3 {
         font-family: $WorkSans;
         font-size: 1.2em;
         font-weight: bold;
         color: $black;
       }
+
       hr.separator {
         margin: 1rem 0 !important;
       }
     }
+
     .secondary_content {
       .menu {
         margin-top: 2rem;
+
         ul {
           margin-left: 0.8rem;
+
           li {
             font-family: $DMSans;
             font-weight: 500;
@@ -388,6 +447,7 @@ main {
             margin: 0.5rem 0;
             font-size: 0.95em;
             list-style: none;
+
             &:before {
               content: "·";
               font-size: 4.5rem;
@@ -398,6 +458,7 @@ main {
           }
         }
       }
+
       .rating {
         h4.total__rating {
           font-size: 2.5em;
@@ -412,6 +473,7 @@ main {
         @include card-style;
         margin: 2rem 0;
         padding: 1rem;
+
         p {
           &.reviewer_name {
             font-family: $WorkSans;
@@ -420,6 +482,7 @@ main {
             font-size: 1em;
             color: $black;
           }
+
           &.review_date {
             font-family: $WorkSans;
             font-style: normal;
@@ -428,6 +491,7 @@ main {
             line-height: 32px;
             color: $black;
           }
+
           &.review_content {
             font-family: $DMSans;
             font-style: normal;
@@ -439,13 +503,16 @@ main {
         }
       }
     }
+
     #form__review {
       padding: 0 2rem 1.5rem;
+
       .review_form {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+
         .input_name,
         .input_description {
           width: 100%;
@@ -456,9 +523,11 @@ main {
           font-family: $DMSans;
           color: grey;
         }
+
         input {
           margin-bottom: 0.5rem;
         }
+
         textarea {
           padding: 0.5rem 1rem;
         }
@@ -490,10 +559,12 @@ main {
             cursor: pointer;
             border: none;
             border-radius: 7px;
+
             &:hover {
               background-color: #c5952d;
               color: white;
             }
+
             &:focus {
               background-color: #ce9928;
               color: white;
@@ -503,14 +574,17 @@ main {
       }
     }
   }
+
   #errMessageContainer {
     margin-top: 1rem;
     padding: 1rem 0;
+
     i.lni-emoji-sad {
       font-size: 3rem;
       color: #808080;
       margin-bottom: 1.3rem;
     }
+
     p.err__message {
       font-size: 1.2em;
       color: #808080;
