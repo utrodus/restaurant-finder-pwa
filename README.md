@@ -54,7 +54,8 @@ yarn install or npm install
 
 Script
 - `npm run dev` - to start locally
-- `npm run build-image` - to build into folder dist
+- `npm run build-image` - to build img into folder dist
+- `npm run build` - to build project for production
 - `npm run lint` - linting
 
 Testing
