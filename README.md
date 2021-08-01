@@ -1,10 +1,10 @@
-[![Website nongkis.firmanjabar.my.id](https://img.shields.io/website-up-down-green-red/http/cari-resto-dicoding.netlify.app.svg)](https://cari-resto-dicoding.netlify.app/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)[![GitHub followers](https://img.shields.io/github/followers/utrodus.svg?style=social&label=Follow&maxAge=2592000)](https://github.com/utrodus?tab=followers)  [![Netlify Status](https://api.netlify.com/api/v1/badges/96a39bea-1725-42e8-8352-68e01209ab37/deploy-status)](https://app.netlify.com/sites/cari-resto-dicoding/deploys)
+[![Website https://cari-resto-dicoding.netlify.app](https://img.shields.io/website-up-down-green-red/http/cari-resto-dicoding.netlify.app.svg)](https://cari-resto-dicoding.netlify.app/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub followers](https://img.shields.io/github/followers/utrodus.svg?style=social&label=Follow&maxAge=2592000)](https://github.com/utrodus?tab=followers)  [![Netlify Status](https://api.netlify.com/api/v1/badges/96a39bea-1725-42e8-8352-68e01209ab37/deploy-status)](https://app.netlify.com/sites/cari-resto-dicoding/deploys)
 
 ## Cari Resto ~ Restaurant Finder PWA (Final Submission Menjadi Front-End Web Developer Expert - Dicoding)
 Web App for find and review best restaurant in Indonesia
 
 ### Results:
-![enter image description here](https://i.ibb.co/vc7XnH3/all-devices-black.png)
+![enter image description here](https://i.ibb.co/fCZPF2G/all-devices-black-min.png)
 
 #### Link production: [https://cari-resto-dicoding.netlify.app/](https://cari-resto-dicoding.netlify.app/)
 
