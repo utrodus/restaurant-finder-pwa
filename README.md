@@ -70,7 +70,7 @@ Testing
 ![sertifikat kelulusan](https://i.ibb.co/Q8MHXLj/sertifikat-min.png)
 
 ### Contact Info
-
+- Website : [utrodus.my.id](https://utrodus.my.id)
 - Instagram : [@come.said](https://www.instagram.com/come.said)
 - WhatsApp : [+62 816 5416 082](https://wa.me/628165416082)
 - Email : [come.programmer@gmail.com](mailto:come.programmer@gmail.com)
